@@ -1,3 +1,3 @@
 { siteTitle = "Brain"
-, siteBaseUrl = "https://www.kmaasrud.com/brain"
+, siteBaseUrl = Some "https://www.kmaasrud.com/brain"
 }
