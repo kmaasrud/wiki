@@ -12,13 +12,12 @@ jobs:
 
     - name: Build neuron site 🔧
       run: |
-        mkdir -p .neuron/output && touch .neuron/output/.nojekyll
-        docker run -v $PWD sridca/neuron neuron gen --pretty-urls
+        docker run -v $PWD sridca/neuron neuron gen -d $PWD -o out --pretty-urls
 
     - name: Publish
       uses: s0/git-publish-subdir-action@develop
       env:
         REPO: self
         BRANCH: gh-pages
-        FOLDER: .neuron/output
+        FOLDER: out
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
