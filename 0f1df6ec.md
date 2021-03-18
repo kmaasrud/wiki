@@ -2,6 +2,7 @@
 title: Expected value
 ---
 
+
 The *expected value* of a variable $X$ is a generalization of the [[b5dd515e]]# of said value. In other words, it is the *weighted* [[b5dd515e]]#.
 
 In the *discrete case*, consider a set of data $X = {x_1, ..., x_N}$ where $p_i$ represents the probability of $x_i$ occuring. Here the expected value is:
