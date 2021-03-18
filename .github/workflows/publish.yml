@@ -13,7 +13,7 @@ jobs:
     - name: Build neuron site 🔧
       run: |
         mkdir -p .neuron/output && touch .neuron/output/.nojekyll
-        docker run -v $PWD:/notes sridca/neuron neuron gen --pretty-urls
+        docker run -v $PWD sridca/neuron neuron gen --pretty-urls
 
     - name: Publish
       uses: s0/git-publish-subdir-action@develop
