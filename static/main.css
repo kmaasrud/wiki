@@ -33,6 +33,7 @@ body .deemphasized:not(:hover) { opacity: 0.5; transition: all var(--transition-
 body .deemphasized:hover { opacity: 1; transition: all var(--transition-length) ease-out; }
 body .deemphasized:not(:hover) a { transition: all var(--transition-length) ease-out !important; }
 body .deemphasized:hover a { transition: all var(--transition-length) ease-out !important; }
+body .footer-version { display: none !important; }
 
 /* Headers */
 body h1, h2, h3, h4, h5, h6, .ui.header, .headerFont {
