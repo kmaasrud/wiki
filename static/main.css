@@ -2,65 +2,86 @@
     --transition-length: 100ms;
     --text-color: 0, 0, 0;
     --link-color: 60, 110, 237;
-    --bg-color: 255, 255, 255;
-    --accent-color: 100, 180, 255;
+    --bg-color: 252, 252, 252;
+    --bg-color-secondary: 239, 240, 241;
+    --accent-color: 127,140,141;
+    --accent-color-secondary: 246,116,0;
+    --accent-color-tertiary: 29,153,243;
 }
 
+.universe { padding-bottom: 200px; }
+body { background-color: rgb(var(--bg-color-secondary)) !important; }
+
+/* Fonts */
 body .ui.container {
     font-family: "IBM Plex Sans", sans-serif !important;
 }
-.ui.raised.raised.segment, .ui.raised.raised.segments {
-    box-shadow: none;
-}
-.ui.attached.segment {
-    border: none;
-}
-.ui.ui.inverted.blue.menu, .ui.ui.ui.inverted.menu .blue.active.item {
-    background-color: rgb(var(--accent-color));
-}
-.ui.blue.segment.segment.segment.segment.segment:not(.inverted) {
-    border: none;
-}
+.ui.segment, .ui.segments .segment { font-size: 1.1rem; }
+
+.ui.raised.raised.segment, .ui.raised.raised.segments { box-shadow: none; }
+.ui.attached.segment { border: none; }
+.ui.ui.inverted.blue.menu, .ui.ui.ui.inverted.menu .blue.active.item { background-color: rgb(var(--accent-color)); }
+.ui.blue.segment.segment.segment.segment.segment:not(.inverted) { border: none; }
 .ui.segment {
     box-shadow: none;
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
-.ui.attached:not(.message) + .ui.attached.segment:not(.top) {
-    border-top: 1px solid rgba(var(--text-color), .3);
-}
+.ui.attached:not(.message) + .ui.attached.segment:not(.top) { border-top: 1px solid rgba(var(--text-color), .3); }
 body .deemphasized:not(:hover) { opacity: 0.5; transition: all var(--transition-length) ease-out; }
 body .deemphasized:hover { opacity: 1; transition: all var(--transition-length) ease-out; }
 body .deemphasized:not(:hover) a { transition: all var(--transition-length) ease-out !important; }
 body .deemphasized:hover a { transition: all var(--transition-length) ease-out !important; }
 body .footer-version { display: none !important; }
 
-/* Headers */
-body h1, h2, h3, h4, h5, h6, .ui.header, .headerFont {
-    font-family: "IBM Plex Sans", serif !important;
-}
-body .zettel-content h1#title-h1 {
-    background-color: rgba(var(--accent-color), 0.15);
-}
-body div.zettel-view .zettel-content h2 {
-    border-bottom: 1px solid rgba(var(--text-color), .3);
+/* Borders */
+body div.zettel-view .zettel-content div#footnotes {
+    border-top: 1px solid rgba(var(--text-color), .2);
 }
 
+/* Headers */
+h1 {
+    font-family: "IBM Plex Serif", serif !important;
+    font-weight: bolder;
+}
+h2, h3, h4, h5, h6, .ui.header, .headerFont {
+    font-family: "IBM Plex Serif", serif !important;
+    font-weight: 500;
+}
+body .zettel-content h1#title-h1 { background-color: rgba(var(--accent-color), 0.0); }
+body div.zettel-view .zettel-content h2 { border-bottom: 1px solid rgba(var(--text-color), .2); }
+
 /* Links */
+body span.zettel-link-container span.zettel-link a,
+body span.zettel-link-container span.zettel-link a:hover {
+    color: rgb(var(--accent-color-secondary));
+    text-decoration-color: rgb(var(--accent-color-secondary));
+}
+a, a:hover {
+    color: rgb(var(--accent-color-tertiary));
+    text-decoration-color: rgb(var(--accent-color-tertiary));
+}
 body span.zettel-link-container span.zettel-link a, a {
     font-weight: 500;
     text-decoration: underline;
     position: relative;
-    color: rgb(var(--accent-color));
-    text-decoration-color: rgb(var(--accent-color));
     transition: all var(--transition-length) ease-out;
 }
 body span.zettel-link-container span.zettel-link a:hover, a:hover {
     text-decoration: underline;
-    color: rgb(var(--accent-color));
     background: none;
-    text-decoration-color: rgba(var(--accent-color), 0.0);
+    text-decoration-color: rgba(0, 0, 0, 0);
 }
 .forest-link a, a[href^="#fn"] {
     text-decoration: none !important;
+}
+
+/* Markers */
+li::marker { color: rgba(var(--text-color), 0.4); }
+body div.zettel-view ul { list-style-type: circle; }
+
+/* Blockquotes */
+body div.zettel-view .zettel-content blockquote { 
+    background-color: rgba(var(--text-color), 0.02);
+    border-left: solid 5px rgba(var(--accent-color), 0.3);
 }
