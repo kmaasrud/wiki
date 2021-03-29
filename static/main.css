@@ -1,22 +1,27 @@
 :root {
     --transition-length: 100ms;
-    --text-color: 0, 0, 0;
+    --text-color: 34, 47, 62;
     --link-color: 60, 110, 237;
     --bg-color: 252, 252, 252;
     --bg-color-secondary: 239, 240, 241;
-    --accent-color: 127,140,141;
-    --accent-color-secondary: 246,116,0;
-    --accent-color-tertiary: 29,153,243;
+    --accent-color: 34, 47, 62;
+    --accent-color-secondary: 243, 104, 224;
+    --accent-color-tertiary: 95, 39, 205;
+    --font-scale: 1.2;
 }
 
 .universe { padding-bottom: 200px; }
-body { background-color: rgb(var(--bg-color-secondary)) !important; }
+body { 
+    background-color: rgb(var(--bg-color-secondary)) !important;
+    color: rgb(var(--text-color));
+}
+.ui.text.container { max-width: 800px; }
 
 /* Fonts */
 body .ui.container {
     font-family: "IBM Plex Sans", sans-serif !important;
 }
-.ui.segment, .ui.segments .segment { font-size: 1.1rem; }
+.ui.segment, .ui.segments .segment { font-size: calc(1.1rem * var(--font-scale)); }
 
 .ui.raised.raised.segment, .ui.raised.raised.segments { box-shadow: none; }
 .ui.attached.segment { border: none; }
@@ -48,6 +53,11 @@ h2, h3, h4, h5, h6, .ui.header, .headerFont {
     font-family: "IBM Plex Serif", serif !important;
     font-weight: 500;
 }
+h1 { font-size: calc(2rem * var(--font-scale)); }
+h2 { font-size: calc(1.71428571rem * var(--font-scale)); }
+h3 { font-size: calc(1.28571429rem * var(--font-scale)); }
+h4 { font-size: calc(1.07142857rem * var(--font-scale)); }
+h5 { font-size: calc(1rem * var(--font-scale)); }
 body .zettel-content h1#title-h1 { background-color: rgba(var(--accent-color), 0.0); }
 body div.zettel-view .zettel-content h2 { border-bottom: 1px solid rgba(var(--text-color), .2); }
 
@@ -85,3 +95,6 @@ body div.zettel-view .zettel-content blockquote {
     background-color: rgba(var(--text-color), 0.02);
     border-left: solid 5px rgba(var(--accent-color), 0.3);
 }
+
+/* Icons */
+i.icon, i.icons { font-size: calc(1em * var(--font-scale)); }
