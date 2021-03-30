@@ -10,4 +10,16 @@ Go ahead and follow any link you want, that should probably lead you down a rabb
 
 All links colored like <span class="zettel-link-container"><span class="zettel-link"><a style="text-decoration: none;">this</a></span></span> are internal, while links colored like <a style="text-decoration: none;">this</a> are normal hyperlinks.
 
+## These notes are work in progress
+
+[[z:zettels?tag=wip]]
+
+## These notes are not started yet
+
+[[z:zettels?tag=not-started]]
+
+## And these notes need rewriting
+
+[[z:zettels?tag=rewrite]]
+
 [^dynamic]: See [[e300e0ed]]
