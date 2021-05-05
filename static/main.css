@@ -5,17 +5,23 @@
     --bg-color: 252, 252, 252;
     --bg-color-secondary: 239, 240, 241;
     --accent-color: 34, 47, 62;
-    --accent-color-secondary: 243, 104, 224;
-    --accent-color-tertiary: 95, 39, 205;
+    --accent-color-secondary: 52,152,219;
+    --accent-color-tertiary: 52,73,94
     --font-scale: 1.2;
 }
 
-.universe { padding-bottom: 200px; }
-body { 
-    background-color: rgb(var(--bg-color-secondary)) !important;
-    color: rgb(var(--text-color));
+.universe {
+	padding-bottom: 200px;
+    background-color: none;
 }
-.ui.text.container { max-width: 800px; }
+body { 
+    color: rgb(var(--text-color));
+    background-color: #fff !important;
+}
+.ui.text.container {
+	max-width: 800px;
+	background-color: none;
+}
 
 /* Fonts */
 body .ui.container {
