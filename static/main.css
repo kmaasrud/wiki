@@ -1,5 +1,5 @@
 :root {
-    --transition-length: 100ms;
+    --transition-length: 80ms;
     --text-color: 34, 47, 62;
     --link-color: 60, 110, 237;
     --bg-color: 252, 252, 252;
@@ -39,8 +39,10 @@ body .ui.container {
     border-top-right-radius: 0;
 }
 .ui.attached:not(.message) + .ui.attached.segment:not(.top) { border-top: 1px solid rgba(var(--text-color), .3); }
-body .deemphasized:not(:hover) { opacity: 0.5; transition: all var(--transition-length) ease-out; }
+body .deemphasized:not(:hover) { opacity: 0.4; transition: all var(--transition-length) ease-out; }
 body .deemphasized:hover { opacity: 1; transition: all var(--transition-length) ease-out; }
+#footnotes:not(:hover) { opacity: 0.4; transition: all var(--transition-length) ease-out; }
+#footnotes:hover { opacity: 1; transition: all var(--transition-length) ease-out; }
 body .deemphasized:not(:hover) a { transition: all var(--transition-length) ease-out !important; }
 body .deemphasized:hover a { transition: all var(--transition-length) ease-out !important; }
 body .footer-version { display: none !important; }
@@ -91,6 +93,8 @@ body span.zettel-link-container span.zettel-link a:hover, a:hover {
 .forest-link a, a[href^="#fn"] {
     text-decoration: none !important;
 }
+.forest-link a { color: rgba(var(--text-color), 0.8) !important; }
+.forest-link a:hover { color: rgb(var(--accent-color-secondary)) !important; }
 
 /* Markers */
 li::marker { color: rgba(var(--text-color), 0.4); }
