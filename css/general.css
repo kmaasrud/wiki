@@ -1,5 +1,6 @@
 /* Base styles and content styles */
 
+@import '../fonts/inter.css'
 @import 'variables.css';
 
 :root {
@@ -8,7 +9,7 @@
 }
 
 html {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Inter", sans-serif;
     color: var(--fg);
     background-color: var(--bg);
     text-size-adjust: none;
@@ -90,8 +91,14 @@ h6:target::before {
 .content p { line-height: 1.45em; }
 .content ol { line-height: 1.45em; }
 .content ul { line-height: 1.45em; }
-.content a { text-decoration: none; }
-.content a:hover { text-decoration: underline; }
+/* .content a { text-decoration: underline; }
+.content a:hover { text-decoration: none; } */
+.content a { text-decoration: underline; }
+.content a:hover {
+    color: var(--bg) !important;
+    background-color: var(--links);
+    text-decoration: none;
+}
 .content img, .content video { max-width: 100%; }
 .content .header:link,
 .content .header:visited {
@@ -174,8 +181,4 @@ blockquote {
     color: var(--sidebar-fg);
     margin: 5px 0px;
     font-weight: bold;
-}
-
-.result-no-output {
-    font-style: italic;
 }

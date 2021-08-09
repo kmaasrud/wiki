@@ -17,6 +17,10 @@ a:visited,
 a > .hljs {
     color: var(--links);
 }
+*::selection, *::-moz-selection {
+    color: var(--bg);
+    background-color: var(--links);
+}
 
 /* Menu Bar */
 
@@ -57,7 +61,7 @@ a > .hljs {
     z-index: 10;
     line-height: var(--menu-bar-height);
     cursor: pointer;
-    transition: color 0.5s;
+    /* transition: color 0.5s; */
 }
 @media only screen and (max-width: 420px) {
     #menu-bar i, #menu-bar .icon-button {
@@ -91,8 +95,9 @@ a > .hljs {
 }
 
 .menu-title {
+    color: var(--fg);
     display: inline-block;
-    font-weight: 200;
+    font-weight: 800;
     font-size: 2.4rem;
     line-height: var(--menu-bar-height);
     text-align: center;
@@ -102,9 +107,10 @@ a > .hljs {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.js .menu-title {
+/* This changes the cursor to a pointer on the whole header. I don't like this, so I've removed it. */
+/* .js .menu-title {
     cursor: pointer;
-}
+} */
 
 .menu-bar,
 .menu-bar:visited,
@@ -142,14 +148,11 @@ a > .hljs {
     justify-content: center;
     align-content: center;
     flex-direction: column;
-
-    transition: color 0.5s, background-color 0.5s;
 }
 
 .nav-chapters:hover {
     text-decoration: none;
     background-color: var(--theme-hover);
-    transition: background-color 0.15s, color 0.15s;
 }
 
 .nav-wrapper {
@@ -164,15 +167,6 @@ a > .hljs {
     width: 90px;
     border-radius: 5px;
     background-color: var(--sidebar-bg);
-}
-
-.previous {
-    float: left;
-}
-
-.next {
-    float: right;
-    right: var(--page-padding);
 }
 
 @media only screen and (max-width: 1080px) {
@@ -261,14 +255,14 @@ mark.fade-out {
     margin: 5px auto 0px auto;
     padding: 10px 16px;
     transition: box-shadow 300ms ease-in-out;
-    border: 1px solid var(--searchbar-border-color);
-    border-radius: 3px;
+    border: none;
     background-color: var(--searchbar-bg);
     color: var(--searchbar-fg);
 }
-#searchbar:focus,
-#searchbar.active {
-    box-shadow: 0 0 3px var(--searchbar-shadow-color);
+#searchbar:focus-visible {
+    outline: solid;
+    outline-color: var(--searchbar-border-color);
+    outline-width: 2px;
 }
 
 .searchresults-header {
