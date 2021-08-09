@@ -48,6 +48,7 @@
 - [Probability mass function](<Probability%20mass%20function.md>)
 - [Quantum mechanics](<Quantum%20mechanics.md>)
 - [Quantum state](<Quantum%20state.md>)
+- [README](<README.md>)
 - [Rank](<Rank.md>)
 - [Residual sum of squares](<Residual%20sum%20of%20squares.md>)
 - [Ridge regression](<Ridge%20regression.md>)
@@ -62,4 +63,3 @@
 - [Van der Waals interaction](<Van%20der%20Waals%20interaction.md>)
 - [Variance](<Variance.md>)
 - [Zettelkasten](<Zettelkasten.md>)
-- [index](<index.md>)
