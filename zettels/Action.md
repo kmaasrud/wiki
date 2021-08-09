@@ -1,7 +1,6 @@
 ---
-title: Action
-tags:
-    - physics/mechanics
+title = "Action"
+tags = ["physics", "mechanics"]
 ---
 
 From [^wiki]:

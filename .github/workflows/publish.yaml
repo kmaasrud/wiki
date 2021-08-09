@@ -1,20 +1,30 @@
-name: "Publish"
+name: Publish
+
 on:
-  # Run only when pushing to master branch
   push:
     branches:
-      - main
+      - master
+
 jobs:
-  neuron:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Build neuron site 🔧
-      run: |
-        mkdir -p .neuron/output && touch .neuron/output/.nojekyll
-        docker run -v $PWD:/notes sridca/neuron neuron gen --pretty-urls
-    - name: Deploy to gh-pages 🚀
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .neuron/output/
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+
+      - name: Setup Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+
+      - name: Install mdzk
+        run: cargo install --git https://github.com/mdzk-rs/mdzk
+
+      - name: Build ZK
+        run: mdzk build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
