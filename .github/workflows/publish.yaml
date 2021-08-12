@@ -12,13 +12,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.1
 
-      - name: Setup Rust toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-
       - name: Install mdzk
-        run: cargo install --git https://github.com/mdzk-rs/mdzk
+        uses: actions-rs/install@v0.1.2
+        with:
+          crate: mdzk
+          version: latest
 
       - name: Build ZK
         run: mdzk build
