@@ -18,7 +18,10 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
         <link rel="stylesheet" href="tomorrow-night.css">
@@ -128,12 +131,14 @@
 
                 <div id="content" class="content">
                     <main>
+                        <h1 class="menu-title">Bootstrapping</h1>
+
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
-<p><strong>Bootstrapping</strong> is (in general) a method of assessing the accuracy of a statistic. It can also be used to estimate the skill of a <a href="/Machine%20learning.html">Machine learning</a> model.</p>
+<p><strong>Bootstrapping</strong> is (in general) a method of assessing the accuracy of a statistic. It can also be used to estimate the skill of a <a href="Machine%20learning.html">machine learning</a> model.</p>
 <p>Briefly, this is the process:</p>
 <ol>
 <li>Choose a number <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> of bootstrap samples to perform.</li>
-<li>Generate <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> bootstrap sets of the desired size, using <a href="/Sampling%20with%20replacement.html">Sampling with replacement</a>.</li>
+<li>Generate <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> bootstrap sets of the desired size, using <a href="Sampling%20with%20replacement.html">sampling with replacement</a>.</li>
 <li>For each bootstrap set, either:
 <ul>
 <li>Calculate the statistic on the set.</li>
