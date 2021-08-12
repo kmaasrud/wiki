@@ -11,9 +11,12 @@ create-missing = true
 use-default-preprocessors = true
 
 [output.html]
+copy-fonts = false
 no-section-label = true
 site-url = "/brain/"
-cname = "kmaasrud.com"
+
+[output.html.print]
+enable = false
 
 [preprocessor.backlinks]
 header = "Backlinks"

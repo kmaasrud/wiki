@@ -3,7 +3,7 @@ title: Lasso regression
 date: 2021-05-26T11:43
 ---
 
-The **Lasso** is a #[[Linear regression|regression]] method expressed as[^elements]:
+The **Lasso** is a [[Linear regression|regression]] method expressed as[^elements]:
 
 $$ \hat \beta^{\text{lasso}} = \underset{\beta}{\arg \min} \begin{Bmatrix}\sum_{i=1}^N\left(y_i - \beta_0 - \sum_{j=1}^p x_{ij}\beta_j\right)^2 + \lambda \sum_{j=1}^p |\beta_j| \end{Bmatrix} .$$
 

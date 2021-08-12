@@ -5,4 +5,4 @@ tags:
     - physics/standard-model
 ---
 
-The **Higgs boson** is an elementary particle in the standard model. It is a #[[Boson]] with a [[Spin]] value of $0$.
+The **Higgs boson** is an elementary particle in the standard model. It is a [[Boson|boson]] with a [[Spin|spin]] value of $0$.

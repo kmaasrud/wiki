@@ -11,6 +11,6 @@ where $\mathbf X$ is the $n\times p$ input matrix, $\mathbf y$ is the output vec
 
 Some methods of linear regression I've written about:
 
-- [[Ordinary least squares regression]]#
-- [[Lasso regression]]#
-- [[Ridge regression]]#
+- [[Ordinary least squares regression]]
+- [[Lasso regression]]
+- [[Ridge regression]]

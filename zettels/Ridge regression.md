@@ -5,7 +5,7 @@ date: 2021-05-26T12:02
 
 **Ridge regression** is a [[Linear regression|regression]] method based on reducing the size of the regression coefficients, and thus increasing the [[Bias|bias]] of the model.
 
-Like in [[Ordinary least squares regression|OLS regresion]], the [[Cost function|cost function]]# is an [[Residual sum of squares|RSS function]], but this time with an extra term pertaining to the shrinkage of each regression coefficient:
+Like in [[Ordinary least squares regression|OLS regresion]], the [[Cost function|cost function]] is an [[Residual sum of squares|RSS function]], but this time with an extra term pertaining to the shrinkage of each regression coefficient:
 
 $$ S(\beta,\lambda) = \text{RSS}(\beta) + \lambda \sum_{j=1}^p\beta_j^2 = \sum_{i=1}^N (y_i - \hat y_i)^2 + \lambda \sum_{j=1}^p\beta_j^2 ,$$
 

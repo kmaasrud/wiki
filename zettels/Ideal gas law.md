@@ -5,7 +5,7 @@ tags:
     - physics/thermodynamics
 ---
 
-The **ideal gas law** is the equation of state followed by #[[Ideal gas]]es. The general case equation is[^malthe-sørensen]:
+The **ideal gas law** is the equation of state followed by [[Ideal gas|ideal gases]]. The general case equation is[^malthe-sørensen]:
 
 $$ pV = Nk_\text{B}T .$$
 

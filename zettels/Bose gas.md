@@ -5,6 +5,4 @@ tags:
     - physics/quantum-mechanics
 ---
 
-In [[Quantum mechanics]], a **Bose gas** is the analogue of an [[Ideal gas]]. It is entirely composed of #[[Boson]]s, that each have an integer value [[Spin]] (leaving all bosons except for the [[Higgs boson]].)
-
-[^1]: 
+A **Bose gas** is the [[Quantum mechanics|quantum mechanical]] analogue of an [[Ideal gas|ideal gas]]. It is entirely composed of [[Boson|bosons]], that each have an integer value [[Spin|spin]] (leaving all bosons except for the [[Higgs boson]].)

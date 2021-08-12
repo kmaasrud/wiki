@@ -23,6 +23,6 @@ $$(g^b \mod p)^a \mod p = g^{ba} \mod p$$
 
 Meaning Alice and Bob end up with the same number. Note also that the only numbers that are visible to the public domain are $p$, $g$, $A$ and $B$ - none of which a malicious actor could use to get the final key (at least not without brute forcing it, which is why $p$ needs to be large).
 
-As an alternative to the regular Diffie-Hellmann, one can exchange the modulo formula with an elliptic curve to get the [[Elliptic curve Diffie-Hellman key exchange]]#.
+As an alternative to the regular Diffie-Hellmann, one can exchange the modulo formula with an elliptic curve to get the [[Elliptic curve Diffie-Hellman key exchange]].
 
 [^computerphile]: Computerphile, & Pound, M. (2017). Diffie Hellman -the Mathematics bit- Computerphile. YouTube. <https://www.youtube.com/watch?v=Yjrfm_oRO0w>
