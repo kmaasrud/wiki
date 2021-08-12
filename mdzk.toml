@@ -2,11 +2,11 @@
 authors = ["kmaasrud"]
 language = "en"
 multilingual = false
-src = "zettels"
+src = "notes"
 title = "Zettelkasten"
 
 [build]
-build-dir = "out"
+build-dir = "html"
 create-missing = true
 use-default-preprocessors = true
 
