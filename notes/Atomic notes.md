@@ -1,6 +1,6 @@
 ---
 title: Atomic notes
-date: 2021-03-20T23:13
+date: 2021-03-20T23:13:04
 tags:
     - notes
     - zettelkasten

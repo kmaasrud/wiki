@@ -1,8 +1,7 @@
 ---
-title: Action
-tags:
-    - physics
-    - mechanics
+title = "Action"
+date = 2021-08-16T09:45:00
+tags = ["physics", "mechanics"]
 ---
 
 From [^wiki]:

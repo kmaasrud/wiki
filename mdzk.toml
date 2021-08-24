@@ -8,7 +8,6 @@ title = "Zettelkasten"
 [build]
 build-dir = "html"
 create-missing = true
-use-default-preprocessors = true
 
 [output.html]
 copy-fonts = false
@@ -18,5 +17,5 @@ site-url = "/brain/"
 [output.html.print]
 enable = false
 
-[preprocessor.backlinks]
-header = "Backlinks"
+# [preprocessor.backlinks]
+# header = "Backlinks"

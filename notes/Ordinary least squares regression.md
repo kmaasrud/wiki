@@ -3,7 +3,7 @@ title: Ordinary least squares regression
 date: 2021-05-26T11:42
 ---
 
-**Ordinary least squares** (OLS) is a method of estimating the parameters in a #[[Linear regression|linear regression]] model. 
+**Ordinary least squares** (OLS) is a method of estimating the parameters in a [[Linear regression|linear regression]] model. 
 
 We have a dataset of $n$ observations $(y_i, \mathbf x_i)$, where $\mathbf x_i$ are the column vectors of length $p$ containing the parameters and $y_i$ are the scalar responses. We set up the linear function for the $i$'th case as
 
@@ -17,11 +17,11 @@ $$ \mathbf y = \mathbf X\mathbf \beta + \mathbf \epsilon ,$$
 
 with $\mathbf X$ being an $n\times p$ matrix, often called the *design matrix* or *matrix of regressors*. It's worth noting that - contrary to what one might think - the $i$'th **row** of $\mathbf X$ equals $\mathbf x_i^T$. Also, the constant term is included in our equation by setting $x_{i1} = 1\ \forall\ i=1,\dots, n$.
 
-Now because of the errors, $\mathbf y = \mathbf X\mathbf \beta$ does not have a unique solution. However, we can find the best fit by finding the vector $\hat \beta$ that minimizes some sort of [[Cost function|cost function]]#,
+Now because of the errors, $\mathbf y = \mathbf X\mathbf \beta$ does not have a unique solution. However, we can find the best fit by finding the vector $\hat \beta$ that minimizes some sort of [[Cost function|cost function]],
 
 $$ \hat \beta = \underset{\beta}{\arg \min} S(\beta) .$$
 
-$\hat \beta$ will give us an estimate of $\mathbf y$, namely $\hat{\mathbf y} = \mathbf X \hat \beta$. In the case of OLS, the [[Cost function|cost function]]# we use is the 
+$\hat \beta$ will give us an estimate of $\mathbf y$, namely $\hat{\mathbf y} = \mathbf X \hat \beta$. In the case of OLS, the [[Cost function|cost function]] we use is the 
 
 $$ \text{RSS}(\beta) = \sum_{i=1}^N \left(y_i - \hat y_i\right)^2 .$$
 
