@@ -13,19 +13,18 @@
 .light {
     --bg: #fff;
     --fg: #000;
+    --links: #008cff;
 
-    --sidebar-bg: #eee;
+    --sidebar-bg: #fafafa;
     --sidebar-fg: #000;
     --sidebar-non-existant: #aaa;
-    --sidebar-active: blue;
+    --sidebar-active: var(--links);
     --sidebar-spacer: #eee;
 
     --scrollbar: #eee;
 
     --icons: #aaa;
-    --icons-hover: blue;
-
-    --links: blue;
+    --icons-hover: var(--links);
 
     --inline-code-color: #301900;
 
@@ -33,7 +32,7 @@
     --theme-popup-border: #eee;
     --theme-hover: #eee;
 
-    --quote-bg: #eee;
+    --quote-bg: #fafafa;
     --quote-border: #eee;
 
     --table-border-color: hsl(0, 0%, 95%);

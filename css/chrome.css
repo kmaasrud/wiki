@@ -3,10 +3,11 @@
 @import 'variables.css';
 
 ::-webkit-scrollbar {
-    background: var(--bg);
+    background: #f6f6f6;
+    width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--scrollbar);
+    background: #e1e1e1;
 }
 html {
     scrollbar-color: var(--scrollbar) var(--bg);
