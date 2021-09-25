@@ -25,4 +25,4 @@ Now what is the whole idea behind shrinking the regression coefficients? Well, i
 
 [^closed-form]: The Ridge regressor can be expressed in a closed-form expression, but for other regression methods, this might not be the case. Therefore, here is a more general formula:
 
-	$$ \hat \beta^{\text{ridge}} = \underset{\beta}{\arg \min} \begin{Bmatrix}\sum_{i=1}^N\left(y_i - \beta_0 - \sum_{j=1}^p x_{ij}\beta_j\right)^2 + \lambda \sum_{j=1}^p \beta_j^2 \end{Bmatrix} .$$
+$$ \hat \beta^{\text{ridge}} = \underset{\beta}{\arg \min} \begin{Bmatrix}\sum_{i=1}^N\left(y_i - \beta_0 - \sum_{j=1}^p x_{ij}\beta_j\right)^2 + \lambda \sum_{j=1}^p \beta_j^2 \end{Bmatrix} .$$

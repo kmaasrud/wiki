@@ -1,24 +1,17 @@
-[book]
+[mdzk]
+backlinks-header = "Backlinks"
 authors = ["kmaasrud"]
 language = "en"
 multilingual = false
 src = "notes"
 title = "Zettelkasten"
-
-[build]
-build-dir = "html"
-create-missing = true
+ignore = [
+    "templates/",
+]
 
 [output.html]
 copy-fonts = false
 no-section-label = true
-# site-url = "/brain/"
-
-[output.html.print]
-enable = false
 
 [output.html.fold]
 enable = true
-
-# [preprocessor.backlinks]
-# header = "Backlinks"
