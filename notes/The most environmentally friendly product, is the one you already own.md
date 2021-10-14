@@ -1,0 +1,5 @@
+This saying might sound obvious, but as a rule of thought it can be very powerful. Many products will market themselves as green - and that may be entirely true[^1]- but there will always be some waste associated with the production of a product. Forcing yourself to reevaluate the need to replace something you already own even if the replacement is "green", will lead to lesser resource waste.
+
+That said, a counter-argument can be made: Supporting companies that try to change the market, will aid in making that happen. [[Vote with your money]], as they say. [[Fairphone]] is a great example of a company worth supporting, though they actually implore their customers to [do just what this note is about](https://www.fairphone.com/en/2019/05/20/the-most-sustainable-phone-is-the-one-you-already-own/).
+
+[^1]: See the opposite: [[Greenwashing]]
