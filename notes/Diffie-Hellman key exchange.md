@@ -1,5 +1,5 @@
 ---
-title: Diffie-Hellmann key exchange
+title: Diffie-Hellman key exchange
 date: 2021-03-24T18:42
 tags:
     - cryptography
