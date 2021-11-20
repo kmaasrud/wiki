@@ -7,13 +7,11 @@ src = "notes"
 title = "Zettelkasten"
 ignore = [
     "templates/",
-    ".obsidian/"
+    ".obsidian/",
 ]
 
-[build]
-preprocessors = ["toc"]
-
 [output.html]
+site-url = "/brain"
 copy-fonts = false
 no-section-label = true
 
