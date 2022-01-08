@@ -12,4 +12,5 @@ Mathematical formulation, via the Lagrangian (see [[Lagrangian mechanics]]:)
 
 $$S=\int dt L(q,\dot q)$$
 
+
 [^wiki]: Wikipedia contributors. (2021, March 9). _Action (physics)_. Wikipedia. <https://en.wikipedia.org/wiki/Action_(physics)>
