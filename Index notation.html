@@ -7,7 +7,7 @@
 
 
         <!-- Custom HTML head -->
-
+        
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -89,14 +89,11 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
+                                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
                         </button>
                         <button style="display: none;" id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
@@ -114,16 +111,6 @@
                     </div>
                 </div>
 
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
-                    </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
-                        </ul>
-                    </div>
-                </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
@@ -138,10 +125,10 @@
                     <main>
                         <p><strong>Index notation</strong> is a way of writing tensors using indices.</p>
 <h2 id="einstein-summation-convention"><a class="header" href="#einstein-summation-convention">Einstein summation convention</a></h2>
-<p>The <strong>Einstein summation convention</strong> is a way of simplifying the notation of summation over indices that range over a set. For example, given indices that range over the set ${1,2,3}$, we write</p>
-<div class="katex-display">y = \sum_{i = 1}^3 c_i x^i = c_1 x^1 + c_2 x^2 + c_3 x^3,</div>
+<p>The <strong>Einstein summation convention</strong> is a way of simplifying the notation of summation over indices that range over a set. For example, given indices that range over the set <span class="katex-inline">{1,2,3}</span>, we write</p>
+<p><span class="katex-display">y = \sum_{i = 1}^3 c_i x^i = c_1 x^1 + c_2 x^2 + c_3 x^3,</span></p>
 <p>which is simplified by the Einstein notation as such:</p>
-<div class="katex-display">y = c_i x^i.</div>
+<p><span class="katex-display">y = c_i x^i.</span></p>
 <h3 id="identities"><a class="header" href="#identities">Identities</a></h3>
 <ol>
 <li><span class="katex-inline">a_{ij}(x_j + y_j) \equiv a_{ij}x_j + a_{ij} y_y</span></li>
@@ -157,15 +144,6 @@
 <li><span class="katex-inline">(a_{ij} + a_{ji})x_i y_j \ne 2a_{ij} x_i y_j</span></li>
 </ol>
 <div class="datetime" style="text-align: center; color: gray; font-style: italic; font-size: 90%;">09:45 Saturday 15 May 2021</div>
-<hr />
-<h2 id="backlinks"><a class="header" href="#backlinks">Backlinks</a></h2>
-<blockquote>
-<ul>
-<li><a href="Kronecker%20delta.html">Kronecker delta</a></li>
-<li><a href="Symmetric%20matrix.html">Symmetric matrix</a></li>
-<li><a href="Tensor.html">Tensor</a></li>
-</ul>
-</blockquote>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.js" integrity="sha384-ov99pRO2tAc0JuxTVzf63RHHeQTJ0CIawbDZFiFTzB07aqFZwEu2pz4uzqL+5OPG" crossorigin="anonymous"></script>
 <script>
@@ -178,6 +156,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }, false)
 </script>
+<hr />
+<h2 id="backlinks"><a class="header" href="#backlinks">Backlinks</a></h2>
+<blockquote>
+<ul>
+<li><a href="Kronecker%20delta.html">Kronecker delta</a></li>
+<li><a href="Symmetric%20matrix.html">Symmetric matrix</a></li>
+<li><a href="Tensor.html">Tensor</a></li>
+</ul>
+</blockquote>
+
                     </main>
                 </div>
             </div>
@@ -191,9 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </script>
 
 
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
 
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="highlight.js" type="text/javascript" charset="utf-8"></script>

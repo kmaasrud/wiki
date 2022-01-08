@@ -7,7 +7,7 @@
 
 
         <!-- Custom HTML head -->
-
+        
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -89,14 +89,11 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
+                                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
                         </button>
                         <button style="display: none;" id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
@@ -114,16 +111,6 @@
                     </div>
                 </div>
 
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
-                    </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
-                        </ul>
-                    </div>
-                </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
@@ -138,27 +125,19 @@
                     <main>
                         <p><strong>Ridge regression</strong> is a <a href="Linear%20regression.html">regression</a> method based on reducing the size of the regression coefficients, and thus increasing the <a href="Bias.html">bias</a> of the model.</p>
 <p>Like in <a href="Ordinary%20least%20squares%20regression.html">OLS regresion</a>, the <span class="missing-link" style="color:darkred;">cost function</span> is an <a href="Residual%20sum%20of%20squares.html">RSS function</a>, but this time with an extra term pertaining to the shrinkage of each regression coefficient:</p>
-<div class="katex-display"> S(\beta,\lambda) = \text{RSS}(\beta) + \lambda \sum_{j=1}^p\beta_j^2 = \sum_{i=1}^N (y_i - \hat y_i)^2 + \lambda \sum_{j=1}^p\beta_j^2 ,</div>
-<div class="katex-display"> S(\beta, \lambda) = (\mathbf y - \mathbf X\beta)^T(\mathbf y - \mathbf X\beta) + \lambda \beta^T\beta </div>
+<p><span class="katex-display"> S(\beta,\lambda) = \text{RSS}(\beta) + \lambda \sum_{j=1}^p\beta_j^2 = \sum_{i=1}^N (y_i - \hat y_i)^2 + \lambda \sum_{j=1}^p\beta_j^2 ,</span></p>
+<p><span class="katex-display"> S(\beta, \lambda) = (\mathbf y - \mathbf X\beta)^T(\mathbf y - \mathbf X\beta) + \lambda \beta^T\beta </span></p>
 <p>Here, <span class="katex-inline">\lambda \ge 0</span> is a parameter that controls how much the <span class="katex-inline">\beta</span>'s are shrunk'; the greater the <span class="katex-inline">\lambda</span>, the more shrinkage. The <em>Ridge estimator</em> is of course now</p>
-<div class="katex-display"> \hat \beta^{\text{ridge}} = \underset{\beta}{\arg \min}\ S(\beta,\lambda) .</div>
+<p><span class="katex-display"> \hat \beta^{\text{ridge}} = \underset{\beta}{\arg \min}\ S(\beta,\lambda) .</span></p>
 <p>Like explained in the <a href="Ordinary%20least%20squares%20regression.html">page about OLS</a>, the above minimization problem can be written on matrix form as <sup class="footnote-reference"><a href="#closed-form">1</a></sup></p>
-<div class="katex-display"> \hat \beta^{\text{ridge}} = (\mathbf X^T\mathbf X + \lambda \mathbf I)^{-1}\mathbf X^T\mathbf y ,</div>
-<p>where <span class="katex-inline">\mathbf I</span> is the <span class="katex-inline">p\times p</span> identity matrix. Notice that when adding a positive constant to the diagonal (or <em>ridge</em> 😉), the matrix inside the parentheses will always be invertible. This was one of the main motivating factors for Ridge regression. Its also worth noting that with <a href="Orthonormality.html">orthonormal</a>, inputs, Ridge regression is just a scaled version of the <a href="Ordinary%20least%20squares%20regression.html">OLS regression</a>, $\hat \beta^{\text{ridge}} = \frac{1}{1 + \lambda}\hat \beta$.</p>
-<p>Now what is the whole idea behind shrinking the regression coefficients? Well, its quite clear that when <span class="katex-inline">\lambda = 0</span> the degrees of freedom of the fit is <span class="katex-inline">\text{df}(\lambda) = p</span>, since this is the number of parameters. However, as <span class="katex-inline">\lambda \rightarrow \infty</span>, then also <span class="katex-inline">\text{df}(\lambda) \rightarrow 0</span>, since we gradually reduce the influence the different parameters have on the fit. So the goal is essentially to reduce the influence of unimportant parameters, and thus reduce <a href="Overfitting.html">overfitting</a>. This ties directly in with reducing the <a href="Variance.html">variance</a> by increasing the <a href="Bias.html">bias</a>, following the <a href="Bias-variance%20tradeoff.html">Bias-variance tradeoff</a>. ^c82391</p>
+<p><span class="katex-display"> \hat \beta^{\text{ridge}} = (\mathbf X^T\mathbf X + \lambda \mathbf I)^{-1}\mathbf X^T\mathbf y ,</span></p>
+<p>where <span class="katex-inline">\mathbf I</span> is the <span class="katex-inline">p\times p</span> identity matrix. Notice that when adding a positive constant to the diagonal (or <em>ridge</em> 😉), the matrix inside the parentheses will always be invertible. This was one of the main motivating factors for Ridge regression. Its also worth noting that with <a href="Orthonormality.html">orthonormal</a>, inputs, Ridge regression is just a scaled version of the <a href="Ordinary%20least%20squares%20regression.html">OLS regression</a>, <span class="katex-inline">\hat \beta^{\text{ridge}} = \frac{1}{1 + \lambda}\hat \beta</span>.</p>
+<div id="c82391">Now what is the whole idea behind shrinking the regression coefficients? Well, its quite clear that when $\lambda = 0$ the degrees of freedom of the fit is $\text{df}(\lambda) = p$, since this is the number of parameters. However, as $\lambda \rightarrow \infty$, then also $\text{df}(\lambda) \rightarrow 0$, since we gradually reduce the influence the different parameters have on the fit. So the goal is essentially to reduce the influence of unimportant parameters, and thus reduce [[Overfitting|overfitting]]. This ties directly in with reducing the [[Variance|variance]] by increasing the [[Bias|bias]], following the [[Bias-variance tradeoff]].</div>
 <div class="footnote-definition" id="closed-form"><sup class="footnote-definition-label">1</sup>
 <p>The Ridge regressor can be expressed in a closed-form expression, but for other regression methods, this might not be the case. Therefore, here is a more general formula:
-$$ \hat \beta^{\text{ridge}} = \underset{\beta}{\arg \min} \begin{Bmatrix}\sum_{i=1}^N\left(y_i - \beta_0 - \sum_{j=1}^p x_{ij}\beta_j\right)^2 + \lambda \sum_{j=1}^p \beta_j^2 \end{Bmatrix} .$$</p>
+<span class="katex-display"> \hat \beta^{\text{ridge}} = \underset{\beta}{\arg \min} \begin{Bmatrix}\sum_{i=1}^N\left(y_i - \beta_0 - \sum_{j=1}^p x_{ij}\beta_j\right)^2 + \lambda \sum_{j=1}^p \beta_j^2 \end{Bmatrix} .</span></p>
 </div>
 <div class="datetime" style="text-align: center; color: gray; font-style: italic; font-size: 90%;">12:02 Wednesday 26 May 2021</div>
-<hr />
-<h2 id="backlinks"><a class="header" href="#backlinks">Backlinks</a></h2>
-<blockquote>
-<ul>
-<li><a href="Lasso%20regression.html">Lasso regression</a></li>
-<li><a href="Linear%20regression.html">Linear regression</a></li>
-</ul>
-</blockquote>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.js" integrity="sha384-ov99pRO2tAc0JuxTVzf63RHHeQTJ0CIawbDZFiFTzB07aqFZwEu2pz4uzqL+5OPG" crossorigin="anonymous"></script>
 <script>
@@ -171,6 +150,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }, false)
 </script>
+<hr />
+<h2 id="backlinks"><a class="header" href="#backlinks">Backlinks</a></h2>
+<blockquote>
+<ul>
+<li><a href="Lasso%20regression.html">Lasso regression</a></li>
+<li><a href="Linear%20regression.html">Linear regression</a></li>
+</ul>
+</blockquote>
+
                     </main>
                 </div>
             </div>
@@ -184,9 +172,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </script>
 
 
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
 
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="highlight.js" type="text/javascript" charset="utf-8"></script>

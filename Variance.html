@@ -7,7 +7,7 @@
 
 
         <!-- Custom HTML head -->
-
+        
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -89,14 +89,11 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
+                                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
                         </button>
                         <button style="display: none;" id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
@@ -114,16 +111,6 @@
                     </div>
                 </div>
 
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
-                    </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
-                        </ul>
-                    </div>
-                </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
@@ -136,21 +123,13 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>The <strong>variance</strong> of a variable <span class="katex-inline">X</span> refers to the <a href="Expected%20value.html">expectation value</a> of the squared difference between $X$ and its <a href="Mean.html">mean</a>.<sup class="footnote-reference"><a href="#wiki">1</a></sup> In other words, it is a measure of how much a set of data is spread around its average.</p>
+                        <p>The <strong>variance</strong> of a variable <span class="katex-inline">X</span> refers to the <a href="Expected%20value.html">expectation value</a> of the squared difference between <span class="katex-inline">X</span> and its <a href="Mean.html">mean</a>.<sup class="footnote-reference"><a href="#wiki">1</a></sup> In other words, it is a measure of how much a set of data is spread around its average.</p>
 <p>In the <em>discrete case</em>, a variable <span class="katex-inline">X</span> with <span class="missing-link" style="color:darkred;">Probability mass function</span> <span class="katex-inline">p</span> has the variance:</p>
-<div class="katex-display"> \text{Var}(X) = \sum_{i = 1}^N p_i\cdot(x_i - \mu)^2 ,</div>
+<p><span class="katex-display"> \text{Var}(X) = \sum_{i = 1}^N p_i\cdot(x_i - \mu)^2 ,</span></p>
 <p>where <span class="katex-inline">\mu</span> is the <a href="Mean.html">mean</a>.</p>
 <div class="footnote-definition" id="wiki"><sup class="footnote-definition-label">1</sup>
 <p>Wikipedia contributors. (2021, March 2). Variance. Wikipedia. <a href="https://en.wikipedia.org/wiki/Variance">https://en.wikipedia.org/wiki/Variance</a></p>
 </div>
-<hr />
-<h2 id="backlinks"><a class="header" href="#backlinks">Backlinks</a></h2>
-<blockquote>
-<ul>
-<li><a href="Bias-variance%20tradeoff.html">Bias-variance tradeoff</a></li>
-<li><a href="Ridge%20regression.html">Ridge regression</a></li>
-</ul>
-</blockquote>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.js" integrity="sha384-ov99pRO2tAc0JuxTVzf63RHHeQTJ0CIawbDZFiFTzB07aqFZwEu2pz4uzqL+5OPG" crossorigin="anonymous"></script>
 <script>
@@ -163,6 +142,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }, false)
 </script>
+<hr />
+<h2 id="backlinks"><a class="header" href="#backlinks">Backlinks</a></h2>
+<blockquote>
+<ul>
+<li><a href="Bias-variance%20tradeoff.html">Bias-variance tradeoff</a></li>
+</ul>
+</blockquote>
+
                     </main>
                 </div>
             </div>
@@ -176,9 +163,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </script>
 
 
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
 
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="highlight.js" type="text/javascript" charset="utf-8"></script>

@@ -7,7 +7,7 @@
 
 
         <!-- Custom HTML head -->
-
+        
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -89,14 +89,11 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
+                                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
                         </button>
                         <button style="display: none;" id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
@@ -114,16 +111,6 @@
                     </div>
                 </div>
 
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
-                    </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
-                        </ul>
-                    </div>
-                </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
@@ -138,34 +125,26 @@
                     <main>
                         <p><strong>Ordinary least squares</strong> (OLS) is a method of estimating the parameters in a <a href="Linear%20regression.html">linear regression</a> model. </p>
 <p>We have a dataset of <span class="katex-inline">n</span> observations <span class="katex-inline">(y_i, \mathbf x_i)</span>, where <span class="katex-inline">\mathbf x_i</span> are the column vectors of length <span class="katex-inline">p</span> containing the parameters and <span class="katex-inline">y_i</span> are the scalar responses. We set up the linear function for the <span class="katex-inline">i</span>'th case as</p>
-<div class="katex-display"> y_i = \beta_1 x_{i1} + \beta_2 x_{i2} + \dots + \beta_p x_{ip} + \epsilon_i,</div>
-<div class="katex-display"> y_i = \mathbf x^T_i\beta + \epsilon_i .</div>
+<p><span class="katex-display"> y_i = \beta_1 x_{i1} + \beta_2 x_{i2} + \dots + \beta_p x_{ip} + \epsilon_i,</span></p>
+<p><span class="katex-display"> y_i = \mathbf x^T_i\beta + \epsilon_i .</span></p>
 <p>Here <span class="katex-inline">\beta</span> is an unknown <span class="katex-inline">p\times 1</span> vector and <span class="katex-inline">\epsilon_i</span> is the error of the model in the <span class="katex-inline">i</span>'th case. So for all <span class="katex-inline">i</span> cases, we write the total equation on matrix form as</p>
-<div class="katex-display"> \mathbf y = \mathbf X\mathbf \beta + \mathbf \epsilon ,</div>
-<p>with <span class="katex-inline">\mathbf X</span> being an <span class="katex-inline">n\times p</span> matrix, often called the <em>design matrix</em> or <em>matrix of regressors</em>. It's worth noting that - contrary to what one might think - the <span class="katex-inline">i</span>'th <strong>row</strong> of <span class="katex-inline">\mathbf X</span> equals <span class="katex-inline">\mathbf x_i^T</span>. Also, the constant term is included in our equation by setting $x_{i1} = 1\ \forall\ i=1,\dots, n$.</p>
+<p><span class="katex-display"> \mathbf y = \mathbf X\mathbf \beta + \mathbf \epsilon ,</span></p>
+<p>with <span class="katex-inline">\mathbf X</span> being an <span class="katex-inline">n\times p</span> matrix, often called the <em>design matrix</em> or <em>matrix of regressors</em>. It's worth noting that - contrary to what one might think - the <span class="katex-inline">i</span>'th <strong>row</strong> of <span class="katex-inline">\mathbf X</span> equals <span class="katex-inline">\mathbf x_i^T</span>. Also, the constant term is included in our equation by setting <span class="katex-inline">x_{i1} = 1\ \forall\ i=1,\dots, n</span>.</p>
 <p>Now because of the errors, <span class="katex-inline">\mathbf y = \mathbf X\mathbf \beta</span> does not have a unique solution. However, we can find the best fit by finding the vector <span class="katex-inline">\hat \beta</span> that minimizes some sort of <span class="missing-link" style="color:darkred;">cost function</span>,</p>
-<div class="katex-display"> \hat \beta = \underset{\beta}{\arg \min} S(\beta) .</div>
+<p><span class="katex-display"> \hat \beta = \underset{\beta}{\arg \min} S(\beta) .</span></p>
 <p><span class="katex-inline">\hat \beta</span> will give us an estimate of <span class="katex-inline">\mathbf y</span>, namely <span class="katex-inline">\hat{\mathbf y} = \mathbf X \hat \beta</span>. In the case of OLS, the <span class="missing-link" style="color:darkred;">cost function</span> we use is the </p>
-<div class="katex-display"> \text{RSS}(\beta) = \sum_{i=1}^N \left(y_i - \hat y_i\right)^2 .</div>
+<p><span class="katex-display"> \text{RSS}(\beta) = \sum_{i=1}^N \left(y_i - \hat y_i\right)^2 .</span></p>
 <p>Changing into matrix notation again, we get</p>
-<div class="katex-display"> \text{RSS}(\beta) = (\mathbf y - \hat{\mathbf y})^T(\mathbf y - \hat{\mathbf y}) = (\mathbf y  - \mathbf X\beta)^T(\mathbf y - \mathbf X\beta) ,</div>
+<p><span class="katex-display"> \text{RSS}(\beta) = (\mathbf y - \hat{\mathbf y})^T(\mathbf y - \hat{\mathbf y}) = (\mathbf y  - \mathbf X\beta)^T(\mathbf y - \mathbf X\beta) ,</span></p>
 <p>which we can differentiate with respect to <span class="katex-inline">\beta</span> to find the minimum.</p>
-<div class="katex-display"> \frac{\partial \text{RSS}}{\partial \beta} = -2\mathbf X^T (\mathbf y - \mathbf X\beta) .</div>
-<p>Assuming <a href="Rank.html">full column rank</a> for $\mathbf X$, $(\mathbf X^T \mathbf X)$ is thus positive definite (and importantly, invertible). Setting the first derivative to $0$, we get<sup class="footnote-reference"><a href="#elements">1</a></sup>:</p>
-<div class="katex-display"> \mathbf X^T(\mathbf y - \mathbf X\beta) = 0</div>
-<div class="katex-display">\Rightarrow \hat \beta = (\mathbf X^T\mathbf X)^{-1}\mathbf X^T \mathbf y </div>
+<p><span class="katex-display"> \frac{\partial \text{RSS}}{\partial \beta} = -2\mathbf X^T (\mathbf y - \mathbf X\beta) .</span></p>
+<p>Assuming <a href="Rank.html">full column rank</a> for <span class="katex-inline">\mathbf X</span>, <span class="katex-inline">(\mathbf X^T \mathbf X)</span> is thus positive definite (and importantly, invertible). Setting the first derivative to $0$, we get<sup class="footnote-reference"><a href="#elements">1</a></sup>:</p>
+<p><span class="katex-display"> \mathbf X^T(\mathbf y - \mathbf X\beta) = 0</span></p>
+<p><span class="katex-display">\Rightarrow \hat \beta = (\mathbf X^T\mathbf X)^{-1}\mathbf X^T \mathbf y </span></p>
 <div class="footnote-definition" id="elements"><sup class="footnote-definition-label">1</sup>
 <p>Hastie, T., Tibshirani, R., &amp; Friedman, J. H. (2009). The elements of statistical learning: data mining, inference, and prediction (2nd ed). Springer.</p>
 </div>
 <div class="datetime" style="text-align: center; color: gray; font-style: italic; font-size: 90%;">11:42 Wednesday 26 May 2021</div>
-<hr />
-<h2 id="backlinks"><a class="header" href="#backlinks">Backlinks</a></h2>
-<blockquote>
-<ul>
-<li><a href="Linear%20regression.html">Linear regression</a></li>
-<li><a href="Ridge%20regression.html">Ridge regression</a></li>
-</ul>
-</blockquote>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.js" integrity="sha384-ov99pRO2tAc0JuxTVzf63RHHeQTJ0CIawbDZFiFTzB07aqFZwEu2pz4uzqL+5OPG" crossorigin="anonymous"></script>
 <script>
@@ -178,6 +157,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }, false)
 </script>
+<hr />
+<h2 id="backlinks"><a class="header" href="#backlinks">Backlinks</a></h2>
+<blockquote>
+<ul>
+<li><a href="Linear%20regression.html">Linear regression</a></li>
+<li><a href="Ridge%20regression.html">Ridge regression</a></li>
+</ul>
+</blockquote>
+
                     </main>
                 </div>
             </div>
@@ -191,9 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </script>
 
 
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
 
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="highlight.js" type="text/javascript" charset="utf-8"></script>

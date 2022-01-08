@@ -7,7 +7,7 @@
 
 
         <!-- Custom HTML head -->
-
+        
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -89,14 +89,11 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
+                                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
                         </button>
                         <button style="display: none;" id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
@@ -114,16 +111,6 @@
                     </div>
                 </div>
 
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
-                    </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
-                        </ul>
-                    </div>
-                </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
@@ -137,19 +124,12 @@
                 <div id="content" class="content">
                     <main>
                         <p>The <strong>Lasso</strong> is a <a href="Linear%20regression.html">regression</a> method expressed as<sup class="footnote-reference"><a href="#elements">1</a></sup>:</p>
-<div class="katex-display"> \hat \beta^{\text{lasso}} = \underset{\beta}{\arg \min} \begin{Bmatrix}\sum_{i=1}^N\left(y_i - \beta_0 - \sum_{j=1}^p x_{ij}\beta_j\right)^2 + \lambda \sum_{j=1}^p |\beta_j| \end{Bmatrix} .</div>
-<p>Notice the similarity to <a href="Ridge%20regression.html">Ridge regression</a>, the difference being the penalty. The ridge penalty $L_2 \equiv \sum_{j=1}^p\beta_j^2$ is replaced by the Lasso penalty $L_1 \equiv \sum_{j=1}^p |\beta_j|$. There's also a difference in that the Lasso regressor has no closed form expression, and must thus be computed programatically.</p>
+<p><span class="katex-display"> \hat \beta^{\text{lasso}} = \underset{\beta}{\arg \min} \begin{Bmatrix}\sum_{i=1}^N\left(y_i - \beta_0 - \sum_{j=1}^p x_{ij}\beta_j\right)^2 + \lambda \sum_{j=1}^p |\beta_j| \end{Bmatrix} .</span></p>
+<p>Notice the similarity to <a href="Ridge%20regression.html">Ridge regression</a>, the difference being the penalty. The ridge penalty <span class="katex-inline">L_2 \equiv \sum_{j=1}^p\beta_j^2</span> is replaced by the Lasso penalty <span class="katex-inline">L_1 \equiv \sum_{j=1}^p |\beta_j|</span>. There's also a difference in that the Lasso regressor has no closed form expression, and must thus be computed programatically.</p>
 <div class="footnote-definition" id="elements"><sup class="footnote-definition-label">1</sup>
 <p>Hastie, T., Tibshirani, R., &amp; Friedman, J. H. (2009). The elements of statistical learning: data mining, inference, and prediction (2nd ed). Springer.</p>
 </div>
 <div class="datetime" style="text-align: center; color: gray; font-style: italic; font-size: 90%;">11:43 Wednesday 26 May 2021</div>
-<hr />
-<h2 id="backlinks"><a class="header" href="#backlinks">Backlinks</a></h2>
-<blockquote>
-<ul>
-<li><a href="Linear%20regression.html">Linear regression</a></li>
-</ul>
-</blockquote>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.js" integrity="sha384-ov99pRO2tAc0JuxTVzf63RHHeQTJ0CIawbDZFiFTzB07aqFZwEu2pz4uzqL+5OPG" crossorigin="anonymous"></script>
 <script>
@@ -162,6 +142,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }, false)
 </script>
+<hr />
+<h2 id="backlinks"><a class="header" href="#backlinks">Backlinks</a></h2>
+<blockquote>
+<ul>
+<li><a href="Linear%20regression.html">Linear regression</a></li>
+</ul>
+</blockquote>
+
                     </main>
                 </div>
             </div>
@@ -175,9 +163,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </script>
 
 
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
 
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="highlight.js" type="text/javascript" charset="utf-8"></script>

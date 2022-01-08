@@ -7,7 +7,7 @@
 
 
         <!-- Custom HTML head -->
-
+        
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -89,14 +89,11 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
+                                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
                         </button>
                         <button style="display: none;" id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
@@ -114,16 +111,6 @@
                     </div>
                 </div>
 
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
-                    </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
-                        </ul>
-                    </div>
-                </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
@@ -137,12 +124,12 @@
                 <div id="content" class="content">
                     <main>
                         <p>The <strong>Lennard-Jones potential</strong> is a model of the interatomic potential between two neutral atoms or molecules. </p>
-<div class="katex-display"> U(r) = 4\epsilon \left(\left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6\right) ,</div>
+<p><span class="katex-display"> U(r) = 4\epsilon \left(\left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6\right) ,</span></p>
 <p>where <span class="katex-inline">\epsilon</span> is a <em>characteristic energy</em>, which is specific for the atoms we are modeling. <span class="katex-inline">\sigma</span> is a <em>characteristic length</em>.<sup class="footnote-reference"><a href="#chem-libretexts">1</a></sup></p>
 <p>The contributions come from the two main interactions:</p>
 <ul>
-<li><strong><span class="missing-link" style="color:darkred;">Van der Waals interaction</span></strong>: There is an attractive force between the atoms, with a potential proportional to $1/r^6$ ($r$ being the distance between them). </li>
-<li><strong><span class="missing-link" style="color:darkred;">Pauli repulsion</span></strong>: Due to the possibility of overlapping orbitals, there are &quot;quantum mechanical effects&quot; (yup, that's way too diffuse) which cause repulsion between the atoms. This is modelled with a power law of the form $1/r^n$. A good approximation is $n = 12$.</li>
+<li><strong><span class="missing-link" style="color:darkred;">Van der Waals interaction</span></strong>: There is an attractive force between the atoms, with a potential proportional to $1/r^6$ (<span class="katex-inline">r</span> being the distance between them). </li>
+<li><strong><span class="missing-link" style="color:darkred;">Pauli repulsion</span></strong>: Due to the possibility of overlapping orbitals, there are &quot;quantum mechanical effects&quot; (yup, that's way too diffuse) which cause repulsion between the atoms. This is modelled with a power law of the form $1/r^n$. A good approximation is <span class="katex-inline">n = 12</span>.</li>
 </ul>
 <div class="footnote-definition" id="chem-libretexts"><sup class="footnote-definition-label">1</sup>
 <p><em>Lennard-Jones Potential</em>. (2013, October 2). Chemistry LibreTexts. <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Physical_Properties_of_Matter/Atomic_and_Molecular_Properties/Intermolecular_Forces/Specific_Interactions/Lennard-Jones_Potential">https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Physical_Properties_of_Matter/Atomic_and_Molecular_Properties/Intermolecular_Forces/Specific_Interactions/Lennard-Jones_Potential</a></p>
@@ -173,9 +160,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </script>
 
 
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
 
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="highlight.js" type="text/javascript" charset="utf-8"></script>

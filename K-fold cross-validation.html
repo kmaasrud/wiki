@@ -7,7 +7,7 @@
 
 
         <!-- Custom HTML head -->
-
+        
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -89,14 +89,11 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
+                                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
                         </button>
                         <button style="display: none;" id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
@@ -114,16 +111,6 @@
                     </div>
                 </div>
 
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
-                    </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
-                        </ul>
-                    </div>
-                </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
@@ -136,13 +123,13 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p><strong><span class="katex-inline">K</span>-fold <a href="Cross-validation.html">Cross-validation</a></strong> involves splitting our dataset into $K$ different &quot;folds&quot;. Say, in our example, that we use $K=6$ and divide our dataset into six different folds. First, we use the first fold as our <a href="Testing%20set.html">testing set</a>, train on the other five and compute the prediction error of the fitted model. Then, we use the second fold as our <a href="Testing%20set.html">testing set</a> and train on the remaining sets, this time also computing the prediction error. Doing this cycle through all $K=6$ folds and averaging the prediction errors gives us our <a href="Cross-validation.html">Cross-validation</a> estimate of the prediction error. </p>
+                        <p><strong><span class="katex-inline">K</span>-fold <a href="Cross-validation.html">Cross-validation</a></strong> involves splitting our dataset into <span class="katex-inline">K</span> different &quot;folds&quot;. Say, in our example, that we use <span class="katex-inline">K=6</span> and divide our dataset into six different folds. First, we use the first fold as our <a href="Testing%20set.html">testing set</a>, train on the other five and compute the prediction error of the fitted model. Then, we use the second fold as our <a href="Testing%20set.html">testing set</a> and train on the remaining sets, this time also computing the prediction error. Doing this cycle through all <span class="katex-inline">K=6</span> folds and averaging the prediction errors gives us our <a href="Cross-validation.html">Cross-validation</a> estimate of the prediction error. </p>
 <p>An illustration of this from <a href="http://qingkaikong.blogspot.com/2017/02/machine-learning-9-more-on-artificial.html">Qinkai's blog</a>:</p>
 <p><img src="https://raw.githubusercontent.com/qingkaikong/blog/master/2017_05_More_on_applying_ANN/figures/figure_1.jpg" alt="" /></p>
-<p>Denoting the fitted function that excludes the <span class="katex-inline">k</span>th fold as <span class="katex-inline">\hat f^{-k}(X)</span>, and defining a function $\kappa:{1,\dots,N}\rightarrow{1,\dots,K}$ that takes in an index of the total dataset and returns the index of the fold containing that datapoint, we can write the <a href="Cross-validation.html">Cross-validation</a> estimate of the prediction error as</p>
-<div class="katex-display"> \text{CV}(\hat f) = \frac{1}{N}\sum_{i=1}^NL\left(y_i, \hat f^{-\kappa(i)}(x_i)\right) .</div>
+<p>Denoting the fitted function that excludes the <span class="katex-inline">k</span>th fold as <span class="katex-inline">\hat f^{-k}(X)</span>, and defining a function <span class="katex-inline">\kappa:{1,\dots,N}\rightarrow{1,\dots,K}</span> that takes in an index of the total dataset and returns the index of the fold containing that datapoint, we can write the <a href="Cross-validation.html">Cross-validation</a> estimate of the prediction error as</p>
+<p><span class="katex-display"> \text{CV}(\hat f) = \frac{1}{N}\sum_{i=1}^NL\left(y_i, \hat f^{-\kappa(i)}(x_i)\right) .</span></p>
 <p>With a set of models indexed by the tuning parameter <span class="katex-inline">\alpha</span>, we see that</p>
-<div class="katex-display"> \text{CV}(\hat f,\alpha) = \frac{1}{N}\sum_{i=1}^NL\left(y_i, \hat f^{-\kappa(i)}(x_i, \alpha)\right) </div>
+<p><span class="katex-display"> \text{CV}(\hat f,\alpha) = \frac{1}{N}\sum_{i=1}^NL\left(y_i, \hat f^{-\kappa(i)}(x_i, \alpha)\right) </span></p>
 <p>is the curve we need to find the minimum of. The value of <span class="katex-inline">\alpha</span> minimizing this curve is often denoted <span class="katex-inline">\hat \alpha</span>, and we now choose our final model to be <span class="katex-inline">f(x,\hat \alpha)</span>.</p>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.js" integrity="sha384-ov99pRO2tAc0JuxTVzf63RHHeQTJ0CIawbDZFiFTzB07aqFZwEu2pz4uzqL+5OPG" crossorigin="anonymous"></script>
@@ -169,9 +156,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </script>
 
 
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
 
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
