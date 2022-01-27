@@ -1,129 +1,112 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
-    <head>
-        <!-- Book generated using mdBook and mdzk -->
-        <meta charset="UTF-8">
-        <title>Ideal gas law - Zettelkasten</title>
+<html lang="en" class="sidebar-visible js">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
 
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
 
-        <!-- Custom HTML head -->
-        
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+    <title>Zettelkasten</title>
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/variables.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/chrome.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com"> 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="css/katex.min.css">
+    <script defer src="js/katex.min.js"></script>
 
-        <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+    <!-- Highlight.js -->
+    <link rel="stylesheet" type="text/css" href="css/atom-one-light.css">
+    <script src="js/highlight.min.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <!-- Provide site root to javascript -->
+    <script type="text/javascript">
+        var path_to_root = "";
+        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "" : "";
+    </script>
 
-        <!-- Custom theme stylesheets -->
-    </head>
-    <body>
-        <!-- Provide site root to javascript -->
-        <script type="text/javascript">
-            var path_to_root = "";
-            var default_theme = "light";
-        </script>
-
-        <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
-            try {
-                var theme = localStorage.getItem('mdbook-theme');
-                var sidebar = localStorage.getItem('mdbook-sidebar');
-
-                if (theme.startsWith('"') && theme.endsWith('"')) {
-                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
-                }
-
-                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
-                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
-                }
-            } catch (e) { }
-        </script>
-
-        <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
-            var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
-            if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
-            html.classList.remove('no-js')
-            html.classList.remove('light')
-            html.classList.add(theme);
-            html.classList.add('js');
-        </script>
-
-        <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
-            var html = document.querySelector('html');
-            var sidebar = 'hidden';
-            if (document.body.clientWidth >= 1080) {
-                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
-                sidebar = sidebar || 'visible';
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script type="text/javascript">
+        try {
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+        } catch (e) { }
+    </script>
+
+    <!-- Hide / unhide sidebar before it is displayed -->
+    <script type="text/javascript">
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdzk-sidebar'); } catch(e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+      <div class="sidebar-scrollbox">
+        <ol class="chapter"><li class="chapter-item "><div>bibliography</div><a class="toggle"><div>→</div></a></li><li><ol class="section"><li class="chapter-item "><a href="bibliography/Bibliography.html">Bibliography</a></li><li class="chapter-item "><a href="bibliography/Innf%C3%B8ring%20i%20kontinuumsmekanikk.html">Innføring i kontinuumsmekanikk</a></li><li class="chapter-item "><a href="bibliography/The%20elements%20of%20statistical%20learning.html">The elements of statistical learning</a></li></ol></li><li class="chapter-item "><a href="food/food.html">food</a><a class="toggle"><div>→</div></a></li><li><ol class="section"><li class="chapter-item "><a href="food/Pasta%20puttanesca.html">Pasta puttanesca</a></li></ol></li><li class="chapter-item "><div>media</div></li><li class="chapter-item "><a href="Action.html">Action</a></li><li class="chapter-item "><a href="Akaike%20information%20criterion.html">Akaike information criterion</a></li><li class="chapter-item "><a href="Atomic%20notes.html">Atomic notes</a></li><li class="chapter-item "><a href="Backpropagation.html">Backpropagation</a></li><li class="chapter-item "><a href="Bayesian%20information%20criterion.html">Bayesian information criterion</a></li><li class="chapter-item "><div>Bi-directional links</div></li><li class="chapter-item "><a href="Bias-variance%20tradeoff.html">Bias-variance tradeoff</a></li><li class="chapter-item "><a href="Bias.html">Bias</a></li><li class="chapter-item "><div>Boltzmann constant</div></li><li class="chapter-item "><a href="Bootstrapping.html">Bootstrapping</a></li><li class="chapter-item "><a href="Bose%20gas.html">Bose gas</a></li><li class="chapter-item "><a href="Boson.html">Boson</a></li><li class="chapter-item "><div>Cauchy's first limit theorem</div></li><li class="chapter-item "><div>Cost function</div></li><li class="chapter-item "><a href="Cross-validation.html">Cross-validation</a></li><li class="chapter-item "><a href="Diffie-Hellman%20key%20exchange.html">Diffie-Hellman key exchange</a></li><li class="chapter-item "><a href="Discontinuity.html">Discontinuity</a></li><li class="chapter-item "><a href="Dynamic%20vs%20static%20notes.html">Dynamic vs static notes</a></li><li class="chapter-item "><a href="Elliptic%20curve%20Diffie-Hellman%20key%20exchange.html">Elliptic curve Diffie-Hellman key exchange</a></li><li class="chapter-item "><div>Elliptic curve cryptography</div></li><li class="chapter-item "><a href="Entropy.html">Entropy</a></li><li class="chapter-item "><a href="Expected%20value.html">Expected value</a></li><li class="chapter-item "><div>Fairphone</div></li><li class="chapter-item "><a href="Gradient%20descent.html">Gradient descent</a></li><li class="chapter-item "><a href="Greenwashing.html">Greenwashing</a></li><li class="chapter-item "><a href="Hadamard%20product.html">Hadamard product</a></li><li class="chapter-item "><a href="Heaviside%20step%20function.html">Heaviside step function</a></li><li class="chapter-item "><a href="Higgs%20boson.html">Higgs boson</a></li><li class="chapter-item "><a href="Ideal%20gas%20law.html" class="active">Ideal gas law</a></li><li class="chapter-item "><a href="Ideal%20gas.html">Ideal gas</a></li><li class="chapter-item "><a href="Identity%20matrix.html">Identity matrix</a></li><li class="chapter-item "><a href="Index%20notation.html">Index notation</a></li><li class="chapter-item "><a href="K-fold%20cross-validation.html">K-fold cross-validation</a></li><li class="chapter-item "><a href="Kronecker%20delta.html">Kronecker delta</a></li><li class="chapter-item "><div>Lagrangian mechanics</div></li><li class="chapter-item "><a href="Lasso%20regression.html">Lasso regression</a></li><li class="chapter-item "><a href="Lennard-Jones%20potential.html">Lennard-Jones potential</a></li><li class="chapter-item "><a href="Likelihood%20function.html">Likelihood function</a></li><li class="chapter-item "><a href="Linear%20regression.html">Linear regression</a></li><li class="chapter-item "><a href="Machine%20learning.html">Machine learning</a></li><li class="chapter-item "><a href="Mean.html">Mean</a></li><li class="chapter-item "><div>Multiplicity</div></li><li class="chapter-item "><div>Neural network</div></li><li class="chapter-item "><a href="Ordinary%20least%20squares%20regression.html">Ordinary least squares regression</a></li><li class="chapter-item "><div>Orthogonality</div></li><li class="chapter-item "><a href="Orthonormality.html">Orthonormality</a></li><li class="chapter-item "><a href="Overfitting.html">Overfitting</a></li><li class="chapter-item "><div>Pauli repulsion</div></li><li class="chapter-item "><div>Probability mass funciton</div></li><li class="chapter-item "><div>Quantum mechanics</div></li><li class="chapter-item "><div>Quantum state</div></li><li class="chapter-item "><a href="index.html">Welcome to my brain!</a></li><li class="chapter-item "><a href="Rank.html">Rank</a></li><li class="chapter-item "><a href="Residual%20sum%20of%20squares.html">Residual sum of squares</a></li><li class="chapter-item "><a href="Ridge%20regression.html">Ridge regression</a></li><li class="chapter-item "><a href="Sampling%20with%20replacement.html">Sampling with replacement</a></li><li class="chapter-item "><a href="Sampling%20without%20replacement.html">Sampling without replacement</a></li><li class="chapter-item "><div>Spin</div></li><li class="chapter-item "><a href="Symmetric%20matrix.html">Symmetric matrix</a></li><li class="chapter-item "><a href="Taylor%20series.html">Taylor series</a></li><li class="chapter-item "><a href="Tensor.html">Tensor</a></li><li class="chapter-item "><a href="Testing%20set.html">Testing set</a></li><li class="chapter-item "><a href="The%20most%20environmentally%20friendly%20product,%20is%20the%20one%20you%20already%20own.html">The most environmentally friendly product, is the one you already own</a></li><li class="chapter-item "><a href="Training%20set.html">Training set</a></li><li class="chapter-item "><a href="Validation%20set.html">Validation set</a></li><li class="chapter-item "><div>Van der Waals interaction</div></li><li class="chapter-item "><a href="Variance.html">Variance</a></li><li class="chapter-item "><div>Volkswagen</div></li><li class="chapter-item "><a href="Vote%20with%20your%20money.html">Vote with your money</a></li><li class="chapter-item "><a href="Zettelkasten.html">Zettelkasten</a></li></ol>
+        <p id="watermark"><a href="https://mdzk.app">Made with mdzk</a></p>
+      </div>
+      <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+      <div class="page">
+        <div id="menu-bar-hover-placeholder"></div>
+        <div id="menu-bar" class="menu-bar sticky bordered">
+          <div class="left-buttons">
+            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+              ☰
+            </button>
+          </div>
+
+          <h1 class="menu-title">Ideal gas law</h1>
+
+          <div class="right-buttons">
+            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+              ⌕
+            </button>
+          </div>
+        </div>
+
+        <div id="search-wrapper" class="hidden">
+          <form id="searchbar-outer" class="searchbar-outer">
+            <input type="search" id="searchbar" name="searchbar" placeholder="Search inside mdzk..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+          </form>
+          <div id="searchresults-outer" class="searchresults-outer hidden">
+            <div id="searchresults-header" class="searchresults-header"></div>
+            <ul id="searchresults">
+            </ul>
+          </div>
+        </div>
+
+        <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+        <script type="text/javascript">
+          document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+          document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+          Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+              link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+          });
         </script>
 
-        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item "><div>bibliography</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="bibliography/Bibliography.html">Bibliography</a></li><li class="chapter-item "><a href="bibliography/Innføring i kontinuumsmekanikk.html">Innføring i kontinuumsmekanikk</a></li><li class="chapter-item "><a href="bibliography/The elements of statistical learning.html">The elements of statistical learning</a></li></ol></li><li class="chapter-item "><a href="food/food.html">food</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="food/Pasta puttanesca.html">Pasta puttanesca</a></li></ol></li><li class="chapter-item "><div>media</div></li><li class="chapter-item "><a href="Action.html">Action</a></li><li class="chapter-item "><a href="Akaike information criterion.html">Akaike information criterion</a></li><li class="chapter-item "><a href="Atomic notes.html">Atomic notes</a></li><li class="chapter-item "><a href="Backpropagation.html">Backpropagation</a></li><li class="chapter-item "><a href="Bayesian information criterion.html">Bayesian information criterion</a></li><li class="chapter-item "><div>Bi-directional links</div></li><li class="chapter-item "><a href="Bias-variance tradeoff.html">Bias-variance tradeoff</a></li><li class="chapter-item "><a href="Bias.html">Bias</a></li><li class="chapter-item "><div>Boltzmann constant</div></li><li class="chapter-item "><a href="Bootstrapping.html">Bootstrapping</a></li><li class="chapter-item "><a href="Bose gas.html">Bose gas</a></li><li class="chapter-item "><a href="Boson.html">Boson</a></li><li class="chapter-item "><div>Cauchy's first limit theorem</div></li><li class="chapter-item "><div>Cost function</div></li><li class="chapter-item "><a href="Cross-validation.html">Cross-validation</a></li><li class="chapter-item "><a href="Diffie-Hellman key exchange.html">Diffie-Hellman key exchange</a></li><li class="chapter-item "><a href="Discontinuity.html">Discontinuity</a></li><li class="chapter-item "><a href="Dynamic vs static notes.html">Dynamic vs static notes</a></li><li class="chapter-item "><a href="Elliptic curve Diffie-Hellman key exchange.html">Elliptic curve Diffie-Hellman key exchange</a></li><li class="chapter-item "><div>Elliptic curve cryptography</div></li><li class="chapter-item "><a href="Entropy.html">Entropy</a></li><li class="chapter-item "><a href="Expected value.html">Expected value</a></li><li class="chapter-item "><div>Fairphone</div></li><li class="chapter-item "><a href="Gradient descent.html">Gradient descent</a></li><li class="chapter-item "><a href="Greenwashing.html">Greenwashing</a></li><li class="chapter-item "><a href="Hadamard product.html">Hadamard product</a></li><li class="chapter-item "><a href="Heaviside step function.html">Heaviside step function</a></li><li class="chapter-item "><a href="Higgs boson.html">Higgs boson</a></li><li class="chapter-item expanded "><a href="Ideal gas law.html" class="active">Ideal gas law</a></li><li class="chapter-item "><a href="Ideal gas.html">Ideal gas</a></li><li class="chapter-item "><a href="Identity matrix.html">Identity matrix</a></li><li class="chapter-item "><a href="Index notation.html">Index notation</a></li><li class="chapter-item "><a href="K-fold cross-validation.html">K-fold cross-validation</a></li><li class="chapter-item "><a href="Kronecker delta.html">Kronecker delta</a></li><li class="chapter-item "><div>Lagrangian mechanics</div></li><li class="chapter-item "><a href="Lasso regression.html">Lasso regression</a></li><li class="chapter-item "><a href="Lennard-Jones potential.html">Lennard-Jones potential</a></li><li class="chapter-item "><a href="Likelihood function.html">Likelihood function</a></li><li class="chapter-item "><a href="Linear regression.html">Linear regression</a></li><li class="chapter-item "><a href="Machine learning.html">Machine learning</a></li><li class="chapter-item "><a href="Mean.html">Mean</a></li><li class="chapter-item "><div>Multiplicity</div></li><li class="chapter-item "><div>Neural network</div></li><li class="chapter-item "><a href="Ordinary least squares regression.html">Ordinary least squares regression</a></li><li class="chapter-item "><div>Orthogonality</div></li><li class="chapter-item "><a href="Orthonormality.html">Orthonormality</a></li><li class="chapter-item "><a href="Overfitting.html">Overfitting</a></li><li class="chapter-item "><div>Pauli repulsion</div></li><li class="chapter-item "><div>Probability mass funciton</div></li><li class="chapter-item "><div>Quantum mechanics</div></li><li class="chapter-item "><div>Quantum state</div></li><li class="chapter-item "><a href="index.html">Welcome to my brain!</a></li><li class="chapter-item "><a href="Rank.html">Rank</a></li><li class="chapter-item "><a href="Residual sum of squares.html">Residual sum of squares</a></li><li class="chapter-item "><a href="Ridge regression.html">Ridge regression</a></li><li class="chapter-item "><a href="Sampling with replacement.html">Sampling with replacement</a></li><li class="chapter-item "><a href="Sampling without replacement.html">Sampling without replacement</a></li><li class="chapter-item "><div>Spin</div></li><li class="chapter-item "><a href="Symmetric matrix.html">Symmetric matrix</a></li><li class="chapter-item "><a href="Taylor series.html">Taylor series</a></li><li class="chapter-item "><a href="Tensor.html">Tensor</a></li><li class="chapter-item "><a href="Testing set.html">Testing set</a></li><li class="chapter-item "><a href="The most environmentally friendly product, is the one you already own.html">The most environmentally friendly product, is the one you already own</a></li><li class="chapter-item "><a href="Training set.html">Training set</a></li><li class="chapter-item "><a href="Validation set.html">Validation set</a></li><li class="chapter-item "><div>Van der Waals interaction</div></li><li class="chapter-item "><a href="Variance.html">Variance</a></li><li class="chapter-item "><div>Volkswagen</div></li><li class="chapter-item "><a href="Vote with your money.html">Vote with your money</a></li><li class="chapter-item "><a href="Zettelkasten.html">Zettelkasten</a></li></ol>
-            </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
-        </nav>
-
-        <div id="page-wrapper" class="page-wrapper">
-
-            <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
-                    <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <button style="display: none;" id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                            <i class="fa fa-paint-brush"></i>
-                        </button>
-                    </div>
-
-                    <h1 class="menu-title">Ideal gas law</h1>
-
-                    <div class="right-buttons">
-                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="dark">Dark</button></li>
-                        </ul>
-
-                    </div>
-                </div>
-
-
-                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
-                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
-                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
-                    });
-                </script>
-
-                <div id="content" class="content">
-                    <main>
-                        <p>The <strong>ideal gas law</strong> is the equation of state followed by <a href="Ideal%20gas.html">ideal gases</a>. The general case equation is<sup class="footnote-reference"><a href="#malthe-sørensen">1</a></sup>:</p>
+        <div id="content" class="content">
+          <main>
+              <p>The <strong>ideal gas law</strong> is the equation of state followed by <a href="Ideal%20gas.html">ideal gases</a>. The general case equation is<sup class="footnote-reference"><a href="#malthe-sørensen">1</a></sup>:</p>
 <p><span class="katex-display"> pV = Nk_\text{B}T .</span></p>
 <p>Here <span class="katex-inline">p</span> is the pressure of the gas, <span class="katex-inline">V</span> is the volume it consumes, <span class="katex-inline">N</span> is the amount of particles it consists of, <span class="katex-inline">k_\text{B}</span> is the <span class="missing-link" title="This note does not exist.">Boltzmann constant</span> and <span class="katex-inline">T</span> is the temperature.</p>
 <div class="footnote-definition" id="malthe-sørensen"><sup class="footnote-definition-label">1</sup>
@@ -141,27 +124,31 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false)
 </script>
 <div class="backlinks">
-<h3 id="backlinks-backlinks-header"><a class="header" href="#backlinks-backlinks-header">Backlinks {.backlinks-header}</a></h3>
+<h3 class="backlinks-header">Backlinks</h3>
 <p><a href="Ideal%20gas.html">Ideal gas</a></p>
 </div>
-                    </main>
-                </div>
-            </div>
+          </main>
         </div>
+      </div>
+    </div>
 
+    <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+    <script type="text/javascript">
+        document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+        document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+        Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+            link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+        });
+    </script>
 
+    <!-- JS for page functionality -->
+    <script src="js/page.js" type="text/javascript" charset="utf-8"></script>
 
+    <!-- Search JS -->
+    <script src="js/elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/searcher.js" type="text/javascript" charset="utf-8"></script>
 
-        <script type="text/javascript">
-            window.playground_copyable = true;
-        </script>
-
-
-
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
-
-        <!-- Custom JS scripts -->
-    </body>
+    <!-- Livereload script (if served using the cli tool) -->
+  </body>
 </html>
