@@ -124,7 +124,7 @@
                 <div id="content" class="content">
                     <main>
                         <p><strong>Ridge regression</strong> is a <a href="Linear%20regression.html">regression</a> method based on reducing the size of the regression coefficients, and thus increasing the <a href="Bias.html">bias</a> of the model.</p>
-<p>Like in <a href="Ordinary%20least%20squares%20regression.html">OLS regresion</a>, the <span class="missing-link" style="color:darkred;">cost function</span> is an <a href="Residual%20sum%20of%20squares.html">RSS function</a>, but this time with an extra term pertaining to the shrinkage of each regression coefficient:</p>
+<p>Like in <a href="Ordinary%20least%20squares%20regression.html">OLS regresion</a>, the <span class="missing-link" title="This note does not exist.">cost function</span> is an <a href="Residual%20sum%20of%20squares.html">RSS function</a>, but this time with an extra term pertaining to the shrinkage of each regression coefficient:</p>
 <p><span class="katex-display"> S(\beta,\lambda) = \text{RSS}(\beta) + \lambda \sum_{j=1}^p\beta_j^2 = \sum_{i=1}^N (y_i - \hat y_i)^2 + \lambda \sum_{j=1}^p\beta_j^2 ,</span></p>
 <p><span class="katex-display"> S(\beta, \lambda) = (\mathbf y - \mathbf X\beta)^T(\mathbf y - \mathbf X\beta) + \lambda \beta^T\beta </span></p>
 <p>Here, <span class="katex-inline">\lambda \ge 0</span> is a parameter that controls how much the <span class="katex-inline">\beta</span>'s are shrunk'; the greater the <span class="katex-inline">\lambda</span>, the more shrinkage. The <em>Ridge estimator</em> is of course now</p>
@@ -137,9 +137,7 @@
 <p>The Ridge regressor can be expressed in a closed-form expression, but for other regression methods, this might not be the case. Therefore, here is a more general formula:
 <span class="katex-display"> \hat \beta^{\text{ridge}} = \underset{\beta}{\arg \min} \begin{Bmatrix}\sum_{i=1}^N\left(y_i - \beta_0 - \sum_{j=1}^p x_{ij}\beta_j\right)^2 + \lambda \sum_{j=1}^p \beta_j^2 \end{Bmatrix} .</span></p>
 </div>
-<div class="datetime" style="text-align: center; color: gray; font-style: italic; font-size: 90%;">12:02 Wednesday 26 May 2021</div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.js" integrity="sha384-ov99pRO2tAc0JuxTVzf63RHHeQTJ0CIawbDZFiFTzB07aqFZwEu2pz4uzqL+5OPG" crossorigin="anonymous"></script>
+<div class="datetime">12:02 Wednesday 26 May 2021</div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var math = document.querySelectorAll("[class^=katex]");
@@ -150,15 +148,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }, false)
 </script>
-<hr />
-<h2 id="backlinks"><a class="header" href="#backlinks">Backlinks</a></h2>
-<blockquote>
-<ul>
-<li><a href="Lasso%20regression.html">Lasso regression</a></li>
-<li><a href="Linear%20regression.html">Linear regression</a></li>
-</ul>
-</blockquote>
-
+<div class="backlinks">
+<h3 id="backlinks-backlinks-header"><a class="header" href="#backlinks-backlinks-header">Backlinks {.backlinks-header}</a></h3>
+<p><a href="Lasso%20regression.html">Lasso regression</a>
+<a href="Linear%20regression.html">Linear regression</a></p>
+</div>
                     </main>
                 </div>
             </div>

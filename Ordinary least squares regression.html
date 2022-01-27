@@ -130,9 +130,9 @@
 <p>Here <span class="katex-inline">\beta</span> is an unknown <span class="katex-inline">p\times 1</span> vector and <span class="katex-inline">\epsilon_i</span> is the error of the model in the <span class="katex-inline">i</span>'th case. So for all <span class="katex-inline">i</span> cases, we write the total equation on matrix form as</p>
 <p><span class="katex-display"> \mathbf y = \mathbf X\mathbf \beta + \mathbf \epsilon ,</span></p>
 <p>with <span class="katex-inline">\mathbf X</span> being an <span class="katex-inline">n\times p</span> matrix, often called the <em>design matrix</em> or <em>matrix of regressors</em>. It's worth noting that - contrary to what one might think - the <span class="katex-inline">i</span>'th <strong>row</strong> of <span class="katex-inline">\mathbf X</span> equals <span class="katex-inline">\mathbf x_i^T</span>. Also, the constant term is included in our equation by setting <span class="katex-inline">x_{i1} = 1\ \forall\ i=1,\dots, n</span>.</p>
-<p>Now because of the errors, <span class="katex-inline">\mathbf y = \mathbf X\mathbf \beta</span> does not have a unique solution. However, we can find the best fit by finding the vector <span class="katex-inline">\hat \beta</span> that minimizes some sort of <span class="missing-link" style="color:darkred;">cost function</span>,</p>
+<p>Now because of the errors, <span class="katex-inline">\mathbf y = \mathbf X\mathbf \beta</span> does not have a unique solution. However, we can find the best fit by finding the vector <span class="katex-inline">\hat \beta</span> that minimizes some sort of <span class="missing-link" title="This note does not exist.">cost function</span>,</p>
 <p><span class="katex-display"> \hat \beta = \underset{\beta}{\arg \min} S(\beta) .</span></p>
-<p><span class="katex-inline">\hat \beta</span> will give us an estimate of <span class="katex-inline">\mathbf y</span>, namely <span class="katex-inline">\hat{\mathbf y} = \mathbf X \hat \beta</span>. In the case of OLS, the <span class="missing-link" style="color:darkred;">cost function</span> we use is the </p>
+<p><span class="katex-inline">\hat \beta</span> will give us an estimate of <span class="katex-inline">\mathbf y</span>, namely <span class="katex-inline">\hat{\mathbf y} = \mathbf X \hat \beta</span>. In the case of OLS, the <span class="missing-link" title="This note does not exist.">cost function</span> we use is the </p>
 <p><span class="katex-display"> \text{RSS}(\beta) = \sum_{i=1}^N \left(y_i - \hat y_i\right)^2 .</span></p>
 <p>Changing into matrix notation again, we get</p>
 <p><span class="katex-display"> \text{RSS}(\beta) = (\mathbf y - \hat{\mathbf y})^T(\mathbf y - \hat{\mathbf y}) = (\mathbf y  - \mathbf X\beta)^T(\mathbf y - \mathbf X\beta) ,</span></p>
@@ -144,9 +144,7 @@
 <div class="footnote-definition" id="elements"><sup class="footnote-definition-label">1</sup>
 <p>Hastie, T., Tibshirani, R., &amp; Friedman, J. H. (2009). The elements of statistical learning: data mining, inference, and prediction (2nd ed). Springer.</p>
 </div>
-<div class="datetime" style="text-align: center; color: gray; font-style: italic; font-size: 90%;">11:42 Wednesday 26 May 2021</div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.js" integrity="sha384-ov99pRO2tAc0JuxTVzf63RHHeQTJ0CIawbDZFiFTzB07aqFZwEu2pz4uzqL+5OPG" crossorigin="anonymous"></script>
+<div class="datetime">11:42 Wednesday 26 May 2021</div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var math = document.querySelectorAll("[class^=katex]");
@@ -157,15 +155,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }, false)
 </script>
-<hr />
-<h2 id="backlinks"><a class="header" href="#backlinks">Backlinks</a></h2>
-<blockquote>
-<ul>
-<li><a href="Linear%20regression.html">Linear regression</a></li>
-<li><a href="Ridge%20regression.html">Ridge regression</a></li>
-</ul>
-</blockquote>
-
+<div class="backlinks">
+<h3 id="backlinks-backlinks-header"><a class="header" href="#backlinks-backlinks-header">Backlinks {.backlinks-header}</a></h3>
+<p><a href="Linear%20regression.html">Linear regression</a>
+<a href="Ridge%20regression.html">Ridge regression</a></p>
+</div>
                     </main>
                 </div>
             </div>
