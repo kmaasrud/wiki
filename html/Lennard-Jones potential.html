@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Lennard-Jones potential</title>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff" />
+<!-- Normalize -->
+<link rel="stylesheet" href="css/normalize.min.css">
+<!-- Prism -->
+<link rel="stylesheet" href="css/prism.min.css">
+<script src="js/prism.min.js"></script>
+<!-- KaTeX -->
+<link rel="stylesheet" href="css/katex.min.css">
+<script src="js/katex.min.js"></script>
+<script src="js/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+renderMathInElement(document.body, {
+delimiters: [
+{left: '$$', right: '$$', display: true},
+{left: '$', right: '$', display: false},
+{left: '\\(', right: '\\)', display: false},
+{left: '\\[', right: '\\]', display: true}
+],
+});
+});
+</script>
+<!-- mdzk stylesheet -->
+<link rel="stylesheet" href="css/mdzk.css">
+</head>
+<body>
+<main>
+<header>
+
+<h1>Lennard-Jones potential</h1>
+</header>
+<article>
+<p>The <strong>Lennard-Jones potential</strong> is a model of the interatomic potential between two neutral atoms or molecules. </p>
+<p>$$ U(r) = 4\epsilon \left(\left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6\right) ,$$</p>
+<p>where $\epsilon$ is a <em>characteristic energy</em>, which is specific for the atoms we are modeling. $\sigma$ is a <em>characteristic length</em>.<sup class="footnote-reference"><a href="#chem-libretexts">1</a></sup></p>
+<p>The contributions come from the two main interactions:</p>
+<ul>
+<li><strong><a href="Van%20der%20Waals%20interaction.html">Van der Waals interaction</a></strong>: There is an attractive force between the atoms, with a potential proportional to $1/r^6$ ($r$ being the distance between them). </li>
+<li><strong><a href="Pauli%20repulsion.html">Pauli repulsion</a></strong>: Due to the possibility of overlapping orbitals, there are “quantum mechanical effects” (yup, that’s way too diffuse) which cause repulsion between the atoms. This is modelled with a power law of the form $1/r^n$. A good approximation is $n = 12$.</li>
+</ul>
+<div class="footnote-definition" id="chem-libretexts"><sup class="footnote-definition-label">1</sup>
+<p><em>Lennard-Jones Potential</em>. (2013, October 2). Chemistry LibreTexts. <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Physical_Properties_of_Matter/Atomic_and_Molecular_Properties/Intermolecular_Forces/Specific_Interactions/Lennard-Jones_Potential">https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Physical_Properties_of_Matter/Atomic_and_Molecular_Properties/Intermolecular_Forces/Specific_Interactions/Lennard-Jones_Potential</a></p>
+</div>
+
+</article>
+<footer class="backlinks">
+<p>
+
+</p>
+</footer>
+</main>
+</body>
+</html>

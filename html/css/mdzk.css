@@ -1,0 +1,112 @@
+@font-face{
+    font-family: 'Source Sans';
+    font-weight: 200 900;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('fonts/SourceSans3VF-Roman.ttf.woff2') format('woff2');
+}
+
+@font-face{
+    font-family: 'Source Sans';
+    font-weight: 200 900;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('fonts/SourceSans3VF-Italic.ttf.woff2') format('woff2');
+}
+:root {
+    --background-color: #fff;
+    --dark-grey-color: #757575;
+    --link-color: #1175e2;
+    --light-grey-color: #eff1f5;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #212529;
+        --dark-grey-color: #78828a;
+        --light-grey-color: #353535;
+        --link-color: #3395ff;
+
+    }
+
+    body {
+        color: #fff;
+        background: var(--background-color);
+    }
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Source Sans";
+    font-size: 18px;
+    line-height: 30px;
+    box-sizing: border-box;
+    padding: 10vw;
+    margin: 0;
+    -moz-osx-font-smoothing: grayscale;
+}
+@media (min-width:1000px){
+    body {
+        padding: 100px;
+    }
+}
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+header h1 {
+    font-family: serif;
+    border-bottom: 1px solid var(--dark-grey-color);
+    padding-bottom: .3em;
+    margin-top: .2em;
+}
+header time {
+    color: var(--dark-grey-color);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: .8em;
+}
+main {
+    max-width: 80ch;
+}
+/* Margin between p's */
+p:not(:last-child) {
+    margin-bottom: 20px;
+}
+code {
+    font-family: monospace;
+    font-size: .9em !important;
+    background-color: var(--light-grey-color);
+    padding: 4px 8px 4px 8px;
+}
+pre code { padding: 0; }
+blockquote {
+    border-left: 4px solid var(--light-grey-color);
+    padding-left: 16px;
+    margin-left: 0;
+    color: var(--dark-grey-color);
+}
+:not(.footnote-definition) + .footnote-definition,
+.footnote-definition + :not(.footnote-definition) {
+    margin-top: 2em;
+}
+.footnote-definition {
+    font-size: 0.8em;
+    margin: 0.5em 0;
+    margin-top: 0.5em;
+    opacity: 0.8;
+}
+.footnote-definition:target {
+    opacity: 1;
+    font-weight: 500;
+}
+.footnote-definition-label {
+  padding: 1px 6px;
+}
+.footnote-definition p {
+  display: inline;
+  margin: 6px;
+}

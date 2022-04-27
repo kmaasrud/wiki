@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Variance</title>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff" />
+<!-- Normalize -->
+<link rel="stylesheet" href="css/normalize.min.css">
+<!-- Prism -->
+<link rel="stylesheet" href="css/prism.min.css">
+<script src="js/prism.min.js"></script>
+<!-- KaTeX -->
+<link rel="stylesheet" href="css/katex.min.css">
+<script src="js/katex.min.js"></script>
+<script src="js/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+renderMathInElement(document.body, {
+delimiters: [
+{left: '$$', right: '$$', display: true},
+{left: '$', right: '$', display: false},
+{left: '\\(', right: '\\)', display: false},
+{left: '\\[', right: '\\]', display: true}
+],
+});
+});
+</script>
+<!-- mdzk stylesheet -->
+<link rel="stylesheet" href="css/mdzk.css">
+</head>
+<body>
+<main>
+<header>
+
+<h1>Variance</h1>
+</header>
+<article>
+<p>The <strong>variance</strong> of a variable $X$ refers to the <a href="Expected%20value.html">expectation value</a> of the squared difference between $X$ and its <a href="Mean.html">mean</a>.<sup class="footnote-reference"><a href="#wiki">1</a></sup> In other words, it is a measure of how much a set of data is spread around its average.</p>
+<p>In the <em>discrete case</em>, a variable $X$ with [[Probability mass function]] $p$ has the variance:</p>
+<p>$$ \text{Var}(X) = \sum_{i = 1}^N p_i\cdot(x_i - \mu)^2 ,$$</p>
+<p>where $\mu$ is the <a href="Mean.html">mean</a>.</p>
+<div class="footnote-definition" id="wiki"><sup class="footnote-definition-label">1</sup>
+<p>Wikipedia contributors. (2021, March 2). Variance. Wikipedia. <a href="https://en.wikipedia.org/wiki/Variance">https://en.wikipedia.org/wiki/Variance</a></p>
+</div>
+
+</article>
+<footer class="backlinks">
+<p>
+
+<a href="Ridge regression.html">Ridge regression</a>
+
+<a href="Bias-variance tradeoff.html">Bias-variance tradeoff</a>
+
+</p>
+</footer>
+</main>
+</body>
+</html>

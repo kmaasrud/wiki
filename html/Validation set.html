@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Validation set</title>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff" />
+<!-- Normalize -->
+<link rel="stylesheet" href="css/normalize.min.css">
+<!-- Prism -->
+<link rel="stylesheet" href="css/prism.min.css">
+<script src="js/prism.min.js"></script>
+<!-- KaTeX -->
+<link rel="stylesheet" href="css/katex.min.css">
+<script src="js/katex.min.js"></script>
+<script src="js/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+renderMathInElement(document.body, {
+delimiters: [
+{left: '$$', right: '$$', display: true},
+{left: '$', right: '$', display: false},
+{left: '\\(', right: '\\)', display: false},
+{left: '\\[', right: '\\]', display: true}
+],
+});
+});
+</script>
+<!-- mdzk stylesheet -->
+<link rel="stylesheet" href="css/mdzk.css">
+</head>
+<body>
+<main>
+<header>
+
+<h1>Validation set</h1>
+</header>
+<article>
+<p>A <strong>validation set</strong> is a set of data reserved for evaluating the <a href="Bias.html">unbiased</a> performance of a model fitted to the <a href="Training%20set.html">training set</a>, and use this evaluation as an aid in tuning the parameters of said model.</p>
+
+</article>
+<footer class="backlinks">
+<p>
+
+<a href="Training set.html">Training set</a>
+
+</p>
+</footer>
+</main>
+</body>
+</html>

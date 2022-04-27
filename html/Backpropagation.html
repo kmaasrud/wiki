@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Backpropagation</title>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff" />
+<!-- Normalize -->
+<link rel="stylesheet" href="css/normalize.min.css">
+<!-- Prism -->
+<link rel="stylesheet" href="css/prism.min.css">
+<script src="js/prism.min.js"></script>
+<!-- KaTeX -->
+<link rel="stylesheet" href="css/katex.min.css">
+<script src="js/katex.min.js"></script>
+<script src="js/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+renderMathInElement(document.body, {
+delimiters: [
+{left: '$$', right: '$$', display: true},
+{left: '$', right: '$', display: false},
+{left: '\\(', right: '\\)', display: false},
+{left: '\\[', right: '\\]', display: true}
+],
+});
+});
+</script>
+<!-- mdzk stylesheet -->
+<link rel="stylesheet" href="css/mdzk.css">
+</head>
+<body>
+<main>
+<header>
+
+<h1>Backpropagation</h1>
+</header>
+<article>
+<p>Backpropagation is an algorithm used in <a href="Machine%20learning.html">machine learning</a> to train a <a href="Neural%20network.html">neural network</a>. The method revolves around calculating the gradient one layer at a time, starting with the last layer’s activation, comparing it to the expected values and from there working backwards through the layer structure to find the total gradient.</p>
+
+</article>
+<footer class="backlinks">
+<p>
+
+</p>
+</footer>
+</main>
+</body>
+</html>

@@ -11,23 +11,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.1
-        
-      - name: Cache cargo registry
-        uses: actions/cache@v1
-        with:
-          path: ~/.cargo/
-          key: ${{ runner.os }}-cargo
-          
-      - name: Setup Rust 🦀
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-
-      - name: Build mdzk 📝
-        run: cargo install --git https://github.com/mdzk-rs/mdzk.git
-
-      - name: Build ZK
-        run: mdzk build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

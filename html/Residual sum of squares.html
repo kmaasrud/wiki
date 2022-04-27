@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Residual sum of squares</title>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff" />
+<!-- Normalize -->
+<link rel="stylesheet" href="css/normalize.min.css">
+<!-- Prism -->
+<link rel="stylesheet" href="css/prism.min.css">
+<script src="js/prism.min.js"></script>
+<!-- KaTeX -->
+<link rel="stylesheet" href="css/katex.min.css">
+<script src="js/katex.min.js"></script>
+<script src="js/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+renderMathInElement(document.body, {
+delimiters: [
+{left: '$$', right: '$$', display: true},
+{left: '$', right: '$', display: false},
+{left: '\\(', right: '\\)', display: false},
+{left: '\\[', right: '\\]', display: true}
+],
+});
+});
+</script>
+<!-- mdzk stylesheet -->
+<link rel="stylesheet" href="css/mdzk.css">
+</head>
+<body>
+<main>
+<header>
+
+<h1>Residual sum of squares</h1>
+</header>
+<article>
+<p>The <strong>residual sum of squares function</strong> is the following:</p>
+<p>$$ \text{RSS} = \sum_{i=1}^N \left(y_i - \hat y_i\right)^2 ,$$</p>
+<p>where $y_i$ is the $i$th variable to be predicted and $\hat y_i$ is the predicted value of $y_i$. It is often used as a <a href="Cost%20function.html">cost function</a> in the training of a linear regression model.</p>
+
+</article>
+<footer class="backlinks">
+<p>
+
+<a href="Ridge regression.html">Ridge regression</a>
+
+</p>
+</footer>
+</main>
+</body>
+</html>

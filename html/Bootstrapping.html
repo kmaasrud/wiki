@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Bootstrapping</title>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff" />
+<!-- Normalize -->
+<link rel="stylesheet" href="css/normalize.min.css">
+<!-- Prism -->
+<link rel="stylesheet" href="css/prism.min.css">
+<script src="js/prism.min.js"></script>
+<!-- KaTeX -->
+<link rel="stylesheet" href="css/katex.min.css">
+<script src="js/katex.min.js"></script>
+<script src="js/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+renderMathInElement(document.body, {
+delimiters: [
+{left: '$$', right: '$$', display: true},
+{left: '$', right: '$', display: false},
+{left: '\\(', right: '\\)', display: false},
+{left: '\\[', right: '\\]', display: true}
+],
+});
+});
+</script>
+<!-- mdzk stylesheet -->
+<link rel="stylesheet" href="css/mdzk.css">
+</head>
+<body>
+<main>
+<header>
+
+<h1>Bootstrapping</h1>
+</header>
+<article>
+<p><strong>Bootstrapping</strong> is (in general) a method of assessing the accuracy of a statistic. It can also be used to estimate the skill of a <a href="Machine%20learning.html">machine learning</a> model.</p>
+<p>Briefly, this is the process:</p>
+<ol>
+<li>Choose a number $B$ of bootstrap samples to perform.</li>
+<li>Generate $B$ bootstrap sets of the desired size, using <a href="Sampling%20with%20replacement.html">sampling with replacement</a>.</li>
+<li>For each bootstrap set, either:
+<ul>
+<li>Calculate the statistic on the set.</li>
+<li>Fit a model to the set and estimate the skill of said model.</li>
+</ul>
+</li>
+<li>Calculate the mean of the statistics/model skill estimates.</li>
+</ol>
+
+</article>
+<footer class="backlinks">
+<p>
+
+</p>
+</footer>
+</main>
+</body>
+</html>

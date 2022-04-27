@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Kronecker delta</title>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff" />
+<!-- Normalize -->
+<link rel="stylesheet" href="css/normalize.min.css">
+<!-- Prism -->
+<link rel="stylesheet" href="css/prism.min.css">
+<script src="js/prism.min.js"></script>
+<!-- KaTeX -->
+<link rel="stylesheet" href="css/katex.min.css">
+<script src="js/katex.min.js"></script>
+<script src="js/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+renderMathInElement(document.body, {
+delimiters: [
+{left: '$$', right: '$$', display: true},
+{left: '$', right: '$', display: false},
+{left: '\\(', right: '\\)', display: false},
+{left: '\\[', right: '\\]', display: true}
+],
+});
+});
+</script>
+<!-- mdzk stylesheet -->
+<link rel="stylesheet" href="css/mdzk.css">
+</head>
+<body>
+<main>
+<header>
+
+<h1>Kronecker delta</h1>
+</header>
+<article>
+<p>The <strong>Kroenecker delta</strong> is a function of two indices that returns the corresponding element of the <a href="Identity%20matrix.html">identity matrix</a>. It is defined as<sup class="footnote-reference"><a href="#wolfram">1</a></sup>:</p>
+<p>$$\delta_{ij} \equiv \begin{cases}1, &amp; i = j \\ 0, &amp; i \ne j\end{cases}$$</p>
+<p>Using <a href="Index%20notation.html">index notation</a>, the Kroenecker delta can be represented in these ways:</p>
+<p>$$\delta_{ij} \equiv \delta_j^i \equiv \delta^{ij}$$</p>
+<div class="footnote-definition" id="wolfram"><sup class="footnote-definition-label">1</sup>
+<p>Weisstein, E. W. (n.d.). Kronecker Delta. MathWorld–A Wolfram Web Resource. Retrieved May 26, 2021, from https://mathworld.wolfram.com/KroneckerDelta.html</p>
+</div>
+
+</article>
+<footer class="backlinks">
+<p>
+
+<a href="Orthonormality.html">Orthonormality</a>
+
+</p>
+</footer>
+</main>
+</body>
+</html>

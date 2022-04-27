@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>K-fold cross-validation</title>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff" />
+<!-- Normalize -->
+<link rel="stylesheet" href="css/normalize.min.css">
+<!-- Prism -->
+<link rel="stylesheet" href="css/prism.min.css">
+<script src="js/prism.min.js"></script>
+<!-- KaTeX -->
+<link rel="stylesheet" href="css/katex.min.css">
+<script src="js/katex.min.js"></script>
+<script src="js/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+renderMathInElement(document.body, {
+delimiters: [
+{left: '$$', right: '$$', display: true},
+{left: '$', right: '$', display: false},
+{left: '\\(', right: '\\)', display: false},
+{left: '\\[', right: '\\]', display: true}
+],
+});
+});
+</script>
+<!-- mdzk stylesheet -->
+<link rel="stylesheet" href="css/mdzk.css">
+</head>
+<body>
+<main>
+<header>
+
+<h1>K-fold cross-validation</h1>
+</header>
+<article>
+<p><strong>$K$-fold <a href="Cross-validation.html">Cross-validation</a></strong> involves splitting our dataset into $K$ different “folds”. Say, in our example, that we use $K=6$ and divide our dataset into six different folds. First, we use the first fold as our <a href="Testing%20set.html">testing set</a>, train on the other five and compute the prediction error of the fitted model. Then, we use the second fold as our <a href="Testing%20set.html">testing set</a> and train on the remaining sets, this time also computing the prediction error. Doing this cycle through all $K=6$ folds and averaging the prediction errors gives us our <a href="Cross-validation.html">Cross-validation</a> estimate of the prediction error. </p>
+<p>An illustration of this from <a href="http://qingkaikong.blogspot.com/2017/02/machine-learning-9-more-on-artificial.html">Qinkai’s blog</a>:</p>
+<p><img src="https://raw.githubusercontent.com/qingkaikong/blog/master/2017_05_More_on_applying_ANN/figures/figure_1.jpg" alt="" /></p>
+<p>Denoting the fitted function that excludes the $k$th fold as $\hat f^{-k}(X)$, and defining a function $\kappa:{1,\dots,N}\rightarrow{1,\dots,K}$ that takes in an index of the total dataset and returns the index of the fold containing that datapoint, we can write the <a href="Cross-validation.html">Cross-validation</a> estimate of the prediction error as</p>
+<p>$$ \text{CV}(\hat f) = \frac{1}{N}\sum_{i=1}^NL\left(y_i, \hat f^{-\kappa(i)}(x_i)\right) .$$</p>
+<p>With a set of models indexed by the tuning parameter $\alpha$, we see that</p>
+<p>$$ \text{CV}(\hat f,\alpha) = \frac{1}{N}\sum_{i=1}^NL\left(y_i, \hat f^{-\kappa(i)}(x_i, \alpha)\right) $$</p>
+<p>is the curve we need to find the minimum of. The value of $\alpha$ minimizing this curve is often denoted $\hat \alpha$, and we now choose our final model to be $f(x,\hat \alpha)$.</p>
+
+</article>
+<footer class="backlinks">
+<p>
+
+</p>
+</footer>
+</main>
+</body>
+</html>

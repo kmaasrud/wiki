@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Linear regression</title>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff" />
+<!-- Normalize -->
+<link rel="stylesheet" href="css/normalize.min.css">
+<!-- Prism -->
+<link rel="stylesheet" href="css/prism.min.css">
+<script src="js/prism.min.js"></script>
+<!-- KaTeX -->
+<link rel="stylesheet" href="css/katex.min.css">
+<script src="js/katex.min.js"></script>
+<script src="js/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+renderMathInElement(document.body, {
+delimiters: [
+{left: '$$', right: '$$', display: true},
+{left: '$', right: '$', display: false},
+{left: '\\(', right: '\\)', display: false},
+{left: '\\[', right: '\\]', display: true}
+],
+});
+});
+</script>
+<!-- mdzk stylesheet -->
+<link rel="stylesheet" href="css/mdzk.css">
+</head>
+<body>
+<main>
+<header>
+
+<h1>Linear regression</h1>
+</header>
+<article>
+<p>A <strong>linear regression model</strong> assumes that the regression function is linear in the inputs. Namely, for a system with $n$ datapoints and $p$ parameters, it can be represented by this matrix equation</p>
+<p>$$ \mathbf y = \mathbf X\mathbf \beta + \mathbf \epsilon ,$$</p>
+<p>where $\mathbf X$ is the $n\times p$ input matrix, $\mathbf y$ is the output vector, $\mathbf \beta$ is the vector of regression coefficients and $\mathbf \epsilon$ contains the errors.</p>
+<p>Some methods of linear regression I’ve written about:</p>
+<ul>
+<li><a href="Ordinary%20least%20squares%20regression.html">Ordinary least squares regression</a></li>
+<li><a href="Lasso%20regression.html">Lasso regression</a></li>
+<li><a href="Ridge%20regression.html">Ridge regression</a></li>
+</ul>
+
+</article>
+<footer class="backlinks">
+<p>
+
+<a href="Ridge regression.html">Ridge regression</a>
+
+<a href="Lasso regression.html">Lasso regression</a>
+
+<a href="Ordinary least squares regression.html">Ordinary least squares regression</a>
+
+</p>
+</footer>
+</main>
+</body>
+</html>

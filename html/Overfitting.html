@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Overfitting</title>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff" />
+<!-- Normalize -->
+<link rel="stylesheet" href="css/normalize.min.css">
+<!-- Prism -->
+<link rel="stylesheet" href="css/prism.min.css">
+<script src="js/prism.min.js"></script>
+<!-- KaTeX -->
+<link rel="stylesheet" href="css/katex.min.css">
+<script src="js/katex.min.js"></script>
+<script src="js/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+renderMathInElement(document.body, {
+delimiters: [
+{left: '$$', right: '$$', display: true},
+{left: '$', right: '$', display: false},
+{left: '\\(', right: '\\)', display: false},
+{left: '\\[', right: '\\]', display: true}
+],
+});
+});
+</script>
+<!-- mdzk stylesheet -->
+<link rel="stylesheet" href="css/mdzk.css">
+</head>
+<body>
+<main>
+<header>
+
+<h1>Overfitting</h1>
+</header>
+<article>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Overfitting.svg/1024px-Overfitting.svg.png" alt="" /></p>
+<p>The green line is an <em>overfitted</em> model, while the black line is a <em>regularized</em> model. The green line tries too hard to fit all the data in the <a href="Training%20set.html">training set</a>, but will therefore likely have a greater error when introduced to the <a href="Testing%20set.html">testing set</a>.</p>
+
+</article>
+<footer class="backlinks">
+<p>
+
+<a href="Ridge regression.html">Ridge regression</a>
+
+<a href="Bias-variance tradeoff.html">Bias-variance tradeoff</a>
+
+</p>
+</footer>
+</main>
+</body>
+</html>

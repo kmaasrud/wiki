@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Bias</title>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff" />
+<!-- Normalize -->
+<link rel="stylesheet" href="css/normalize.min.css">
+<!-- Prism -->
+<link rel="stylesheet" href="css/prism.min.css">
+<script src="js/prism.min.js"></script>
+<!-- KaTeX -->
+<link rel="stylesheet" href="css/katex.min.css">
+<script src="js/katex.min.js"></script>
+<script src="js/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+renderMathInElement(document.body, {
+delimiters: [
+{left: '$$', right: '$$', display: true},
+{left: '$', right: '$', display: false},
+{left: '\\(', right: '\\)', display: false},
+{left: '\\[', right: '\\]', display: true}
+],
+});
+});
+</script>
+<!-- mdzk stylesheet -->
+<link rel="stylesheet" href="css/mdzk.css">
+</head>
+<body>
+<main>
+<header>
+
+<h1>Bias</h1>
+</header>
+<article>
+<p>The <strong>bias</strong> of an estimator is the difference between the esimator’s expected value and the true value of the parameter being estimated.<sup class="footnote-reference"><a href="#wiki">1</a></sup></p>
+<div class="footnote-definition" id="wiki"><sup class="footnote-definition-label">1</sup>
+<p>Wikipedia contributors. (2021, March 17). Bias of an estimator. Wikipedia. <a href="https://en.wikipedia.org/wiki/Bias_of_an_estimator">https://en.wikipedia.org/wiki/Bias_of_an_estimator</a></p>
+</div>
+
+</article>
+<footer class="backlinks">
+<p>
+
+<a href="Testing set.html">Testing set</a>
+
+<a href="Validation set.html">Validation set</a>
+
+<a href="Ridge regression.html">Ridge regression</a>
+
+<a href="Bias-variance tradeoff.html">Bias-variance tradeoff</a>
+
+</p>
+</footer>
+</main>
+</body>
+</html>

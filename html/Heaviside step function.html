@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Heaviside step function</title>
+<meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff" />
+<!-- Normalize -->
+<link rel="stylesheet" href="css/normalize.min.css">
+<!-- Prism -->
+<link rel="stylesheet" href="css/prism.min.css">
+<script src="js/prism.min.js"></script>
+<!-- KaTeX -->
+<link rel="stylesheet" href="css/katex.min.css">
+<script src="js/katex.min.js"></script>
+<script src="js/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+renderMathInElement(document.body, {
+delimiters: [
+{left: '$$', right: '$$', display: true},
+{left: '$', right: '$', display: false},
+{left: '\\(', right: '\\)', display: false},
+{left: '\\[', right: '\\]', display: true}
+],
+});
+});
+</script>
+<!-- mdzk stylesheet -->
+<link rel="stylesheet" href="css/mdzk.css">
+</head>
+<body>
+<main>
+<header>
+
+<h1>Heaviside step function</h1>
+</header>
+<article>
+<p>The <strong>Heaviside step function</strong> is a <a href="Discontinuity.html">discontinuous</a> function whose value is $0$ for all negative values and $1$ for non-negative values. It is defined as</p>
+<p>$$H(x) \equiv \begin{cases}0 &amp; \text{for } x&lt;0 \ 1 &amp; \text{for } x &gt; 0\end{cases}.$$</p>
+<p>For analytical applications, $H$ is usually not defined at $x = 0$, although for many numerical use cases, the average is often used, namely $H(0) = \frac{1}{2}$.</p>
+
+</article>
+<footer class="backlinks">
+<p>
+
+</p>
+</footer>
+</main>
+</body>
+</html>
