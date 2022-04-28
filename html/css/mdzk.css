@@ -124,14 +124,12 @@ blockquote {
     z-index: -1;
 }
 #theme-switch input[type="checkbox"]+span:before {
-    content: '☀';
+    content: '🌝';
     display: inline-block;
-    padding: 2px 0 0 3px;
-    margin-right: 0.5em;
+    margin: 0.5em;
 }
 #theme-switch input[type="checkbox"]:checked+span:before {
-    content: '☾';
+    content: '🌚';
     display: inline-block;
-    padding: 2px 0 0 3px;
-    margin-right: 0.5em;
+    margin: 0.5em;
 }
