@@ -13,34 +13,33 @@
     font-stretch: normal;
     src: url('fonts/SourceSans3VF-Italic.ttf.woff2') format('woff2');
 }
-:root {
+:root[color-mode="light"] {
+    --foreground-color: #000;
     --background-color: #fff;
     --dark-grey-color: #757575;
     --link-color: #1175e2;
     --light-grey-color: #eff1f5;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #212529;
-        --dark-grey-color: #78828a;
-        --light-grey-color: #353535;
-        --link-color: #3395ff;
+:root[color-mode="dark"] {
+    --foreground-color: #fff;
+    --background-color: #1c1c1e;
+    --dark-grey-color: #78828a;
+    --light-grey-color: #353535;
+    --link-color: #3395ff;
+}
 
-    }
-
-    body {
-        color: #fff;
-        background: var(--background-color);
-    }
+::selection, ::-moz-selection {
+  background: var(--foreground-color);
+  color: var(--background-color);
 }
 
 body {
+    color: var(--foreground-color);
     background-color: var(--background-color);
     font-family: "Source Sans";
     font-size: 18px;
-    line-height: 30px;
-    box-sizing: border-box;
+    line-height: 1.3;
     padding: 10vw;
     margin: 0;
     -moz-osx-font-smoothing: grayscale;
@@ -91,12 +90,12 @@ blockquote {
 }
 :not(.footnote-definition) + .footnote-definition,
 .footnote-definition + :not(.footnote-definition) {
-    margin-top: 2em;
+    padding-top: 2em;
+    border-top: 1px solid var(--light-grey-color);
 }
 .footnote-definition {
     font-size: 0.8em;
-    margin: 0.5em 0;
-    margin-top: 0.5em;
+    margin: 0.4em 0;
     opacity: 0.8;
 }
 .footnote-definition:target {
@@ -104,9 +103,35 @@ blockquote {
     font-weight: 500;
 }
 .footnote-definition-label {
-  padding: 1px 6px;
+    padding: 1px 6px;
+    top: 0;
+    font-size: inherit;
 }
 .footnote-definition p {
-  display: inline;
-  margin: 6px;
+    display: inline;
+    margin: 6px;
+}
+.katex { font-size: 1.1em; }
+/* Theme toggle */
+#theme-switch {
+    position: absolute;
+    top: 0;
+    right: 0
+}
+#theme-switch input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+#theme-switch input[type="checkbox"]+span:before {
+    content: '☀';
+    display: inline-block;
+    padding: 2px 0 0 3px;
+    margin-right: 0.5em;
+}
+#theme-switch input[type="checkbox"]:checked+span:before {
+    content: '☾';
+    display: inline-block;
+    padding: 2px 0 0 3px;
+    margin-right: 0.5em;
 }
