@@ -1,11 +1,12 @@
 <!DOCTYPE HTML>
 <html color-mode="light">
 <head>
-<title>Ordinary least squares regression</title>
+<title>Ordinary least squares regression - kmaasrud's brain</title>
 <meta charset="UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#ffffff" />
+
 <!-- Normalize -->
 <link rel="stylesheet" href="css/normalize.min.css">
 <!-- Prism -->
@@ -41,7 +42,7 @@ delimiters: [
 <h1>Ordinary least squares regression</h1>
 </header>
 <article>
-<p><strong>Ordinary least squares</strong> (OLS) is a method of estimating the parameters in a <a href="Linear%20regression.html">linear regression</a> model. </p>
+<p><strong>Ordinary least squares</strong> (OLS) is a method of estimating the parameters in a <a href="Linear%20regression.html">linear regression</a> model.</p>
 <p>We have a dataset of $n$ observations $(y_i, \mathbf x_i)$, where $\mathbf x_i$ are the column vectors of length $p$ containing the parameters and $y_i$ are the scalar responses. We set up the linear function for the $i$’th case as</p>
 <p>$$ y_i = \beta_1 x_{i1} + \beta_2 x_{i2} + \dots + \beta_p x_{ip} + \epsilon_i,$$</p>
 <p>$$ y_i = \mathbf x^T_i\beta + \epsilon_i .$$</p>
@@ -50,7 +51,7 @@ delimiters: [
 <p>with $\mathbf X$ being an $n\times p$ matrix, often called the <em>design matrix</em> or <em>matrix of regressors</em>. It’s worth noting that - contrary to what one might think - the $i$’th <strong>row</strong> of $\mathbf X$ equals $\mathbf x_i^T$. Also, the constant term is included in our equation by setting $x_{i1} = 1\ \forall\ i=1,\dots, n$.</p>
 <p>Now because of the errors, $\mathbf y = \mathbf X\mathbf \beta$ does not have a unique solution. However, we can find the best fit by finding the vector $\hat \beta$ that minimizes some sort of <a href="Cost%20function.html">cost function</a>,</p>
 <p>$$ \hat \beta = \underset{\beta}{\arg \min} S(\beta) .$$</p>
-<p>$\hat \beta$ will give us an estimate of $\mathbf y$, namely $\hat{\mathbf y} = \mathbf X \hat \beta$. In the case of OLS, the <a href="Cost%20function.html">cost function</a> we use is the </p>
+<p>$\hat \beta$ will give us an estimate of $\mathbf y$, namely $\hat{\mathbf y} = \mathbf X \hat \beta$. In the case of OLS, the <a href="Cost%20function.html">cost function</a> we use is the</p>
 <p>$$ \text{RSS}(\beta) = \sum_{i=1}^N \left(y_i - \hat y_i\right)^2 .$$</p>
 <p>Changing into matrix notation again, we get</p>
 <p>$$ \text{RSS}(\beta) = (\mathbf y - \hat{\mathbf y})^T(\mathbf y - \hat{\mathbf y}) = (\mathbf y  - \mathbf X\beta)^T(\mathbf y - \mathbf X\beta) ,$$</p>
@@ -60,7 +61,7 @@ delimiters: [
 <p>$$ \mathbf X^T(\mathbf y - \mathbf X\beta) = 0$$</p>
 <p>$$\Rightarrow \hat \beta = (\mathbf X^T\mathbf X)^{-1}\mathbf X^T \mathbf y $$</p>
 <div class="footnote-definition" id="elements"><sup class="footnote-definition-label">1</sup>
-<p>Hastie, T., Tibshirani, R., &amp; Friedman, J. H. (2009). The elements of statistical learning: data mining, inference, and prediction (2nd ed). Springer.</p>
+<p><a href="bib/The%20elements%20of%20statistical%20learning.html">The elements of statistical learning</a></p>
 </div>
 
 </article>
