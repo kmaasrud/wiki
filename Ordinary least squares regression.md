@@ -3,7 +3,7 @@ title: Ordinary least squares regression
 date: 2021-05-26T11:42
 ---
 
-**Ordinary least squares** (OLS) is a method of estimating the parameters in a [[Linear regression|linear regression]] model. 
+**Ordinary least squares** (OLS) is a method of estimating the parameters in a [[Linear regression|linear regression]] model.
 
 We have a dataset of $n$ observations $(y_i, \mathbf x_i)$, where $\mathbf x_i$ are the column vectors of length $p$ containing the parameters and $y_i$ are the scalar responses. We set up the linear function for the $i$'th case as
 
@@ -21,7 +21,7 @@ Now because of the errors, $\mathbf y = \mathbf X\mathbf \beta$ does not have a 
 
 $$ \hat \beta = \underset{\beta}{\arg \min} S(\beta) .$$
 
-$\hat \beta$ will give us an estimate of $\mathbf y$, namely $\hat{\mathbf y} = \mathbf X \hat \beta$. In the case of OLS, the [[Cost function|cost function]] we use is the 
+$\hat \beta$ will give us an estimate of $\mathbf y$, namely $\hat{\mathbf y} = \mathbf X \hat \beta$. In the case of OLS, the [[Cost function|cost function]] we use is the
 
 $$ \text{RSS}(\beta) = \sum_{i=1}^N \left(y_i - \hat y_i\right)^2 .$$
 
@@ -39,4 +39,4 @@ $$ \mathbf X^T(\mathbf y - \mathbf X\beta) = 0$$
 
 $$\Rightarrow \hat \beta = (\mathbf X^T\mathbf X)^{-1}\mathbf X^T \mathbf y $$
 
-[^elements]: Hastie, T., Tibshirani, R., & Friedman, J. H. (2009). The elements of statistical learning: data mining, inference, and prediction (2nd ed). Springer.
+[^elements]: [[The elements of statistical learning]]

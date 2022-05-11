@@ -13,6 +13,21 @@
     font-stretch: normal;
     src: url('fonts/SourceSans3VF-Italic.ttf.woff2') format('woff2');
 }
+@font-face{
+    font-family: 'Source Serif';
+    font-weight: 200 900;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('fonts/SourceSerif4VF-Roman.ttf.woff2') format('woff2');
+}
+
+@font-face{
+    font-family: 'Source Serif';
+    font-weight: 200 900;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('fonts/SourceSerif4VF-Italic.ttf.woff2') format('woff2');
+}
 :root[color-mode="light"] {
     --foreground-color: #000;
     --background-color: #fff;
@@ -48,6 +63,10 @@ body {
         padding: 8vw;
     }
 }
+main {
+    max-width: 80ch;
+}
+/* Links */
 a {
     color: var(--link-color);
     text-decoration: none;
@@ -55,10 +74,10 @@ a {
 a:hover {
     text-decoration: underline;
 }
+/* Headers */
 header h1 {
-    font-family: serif;
     border-bottom: 1px solid var(--grey1);
-    padding-bottom: .3em;
+    padding-bottom: .2em;
     margin-top: .2em;
 }
 header time {
@@ -67,9 +86,7 @@ header time {
     letter-spacing: 3px;
     font-size: .8em;
 }
-main {
-    max-width: 80ch;
-}
+h1, h2, h3, h4, h5, h6 { font-family: "Source Serif"; }
 /* Margin between p's */
 p:not(:last-child) {
     margin-bottom: 20px;
@@ -77,10 +94,13 @@ p:not(:last-child) {
 code {
     font-family: monospace;
     font-size: .9em !important;
-    background-color: var(--grey2);
+    background-color: var(--grey0);
     padding: 4px 8px 4px 8px;
 }
-pre code { padding: 0; }
+pre code {
+    padding: 0;
+    background-color: var(--grey2);
+}
 blockquote {
     border-left: 4px solid var(--grey2);
     padding-left: 16px;
@@ -147,4 +167,13 @@ blockquote {
 .incoming-links p a:hover {
     background-color: var(--grey0);
     text-decoration: none;
+}
+/* Images */
+img {
+    display: block;
+    margin: .5rem auto;
+    max-width: 100%;
+}
+a {
+    color: cyan;
 }

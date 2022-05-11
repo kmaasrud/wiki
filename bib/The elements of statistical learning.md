@@ -2,7 +2,7 @@ Course literature in [STK-IN4300](https://www.uio.no/studier/emner/matnat/math/S
 
 **APA**: Hastie, T., Tibshirani, R., & Friedman, J. H. (2009). _The elements of statistical learning: data mining, inference, and prediction_ (2nd ed). Springer.
 
-```bib
+```bibtex
 @book{hastie_elements_2009,
 	address = {New York, NY},
 	edition = {2nd ed},
