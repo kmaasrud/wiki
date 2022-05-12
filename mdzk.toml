@@ -1,8 +1,4 @@
 title = "kmaasrud's brain"
 
 [style]
-css= """
-a {
-    color: cyan;
-}
-"""
+dark-mode = false
