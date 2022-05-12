@@ -33,6 +33,11 @@ delimiters: [
 </head>
 <body>
 
+<label id="theme-switch" class="theme-switch" for="checkbox_theme">
+<input type="checkbox" id="checkbox_theme">
+<span></span>
+</label>
+
 <main>
 <header>
 
@@ -45,7 +50,9 @@ Cost function
 
 </article>
 <footer>
+
 <div class="incoming-links">
+<h3>Incoming links</h3>
 <p>
 
 <a href="Ridge regression.html">Ridge regression</a>
@@ -56,8 +63,54 @@ Cost function
 
 </p>
 </div>
+
 </footer>
 </main>
+<p class="watermark">Page made with <a href="https://mdzk.app">mdzk</a></p>
+
+<script>
+// Determines if the user has a set theme
+function detectColorScheme(){
+var theme="light"; // default to light
+// Local storage is used to override OS theme settings
+if (localStorage.getItem("color-mode")) {
+if (localStorage.getItem("color-mode") == "dark") {
+var theme = "dark";
+}
+} else if (!window.matchMedia) {
+// matchMedia method not supported
+return false;
+} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+// OS theme setting detected as dark
+var theme = "dark";
+}
+// Dark theme preferred, set document with a `data-theme` attribute
+if (theme == "dark") {
+document.documentElement.setAttribute("color-mode", "dark");
+}
+}
+detectColorScheme();
+// Identify the toggle switch HTML element
+const toggleSwitch = document.querySelector('#theme-switch input[type="checkbox"]');
+// Function that changes the theme, and sets a localStorage variable to track the theme between page loads
+function switchTheme(e) {
+if (e.target.checked) {
+localStorage.setItem("color-mode", "dark");
+document.documentElement.setAttribute("color-mode", "dark");
+toggleSwitch.checked = true;
+} else {
+localStorage.setItem("color-mode", "light");
+document.documentElement.setAttribute("color-mode", "light");
+toggleSwitch.checked = false;
+}
+}
+// Listener for changing themes
+toggleSwitch.addEventListener('click', switchTheme, false);
+// Pre-check the dark-theme checkbox if dark-theme is set
+if (document.documentElement.getAttribute("color-mode") == "dark"){
+toggleSwitch.checked = true;
+}
+</script>
 
 </body>
 </html>

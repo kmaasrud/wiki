@@ -85,6 +85,7 @@ video {
   color: var(--background-color);
 }
 body {
+    position: relative;
     color: var(--foreground-color);
     background-color: var(--background-color);
     font-family: "Source Sans";
@@ -134,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
 p:not(:last-child) {
     margin-bottom: 20px;
 }
-/* Code  */
+/* Code */
 code {
     font-family: monospace;
     font-size: .8em !important;
@@ -143,6 +144,7 @@ code {
 }
 pre {
     background-color: var(--pre-background) !important;
+	border: 1px solid var(--grey2);
 }
 @media(max-width: 1000px) {
     pre {
@@ -151,7 +153,6 @@ pre {
 }
 pre code {
     padding: 0;
-    background-color: var(--grey3);
 }
 blockquote {
     border-left: 4px solid var(--grey2);
@@ -206,6 +207,16 @@ blockquote {
     margin: 0.5em;
 }
 /* Incoming links */
+.incoming-links {
+  margin-top: 2em;
+}
+.incoming-links h3 {
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  margin-top: 0;
+  text-align: center;
+  border-bottom: 1px solid var(--grey2);
+}
 .incoming-links p {
     gap: calc(100%/30/2);
     display: flex;
@@ -306,4 +317,14 @@ dd {
 li > ul,
 li > ol {
 	margin-bottom: 0;
+}
+/* Watermark */
+p.watermark {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: var(--grey1);
+  margin: 0 2em 1em 0;
+  font-size: 70%;
+  font-style: italic;
 }

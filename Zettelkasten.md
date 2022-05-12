@@ -51,15 +51,12 @@ Here is a numbered list as well:
 
 ## Here I've also included some code
 
-```go
-// You can edit this code!
+```rust
+// This is some sample code
 // Click here and start typing.
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println("Hello, 世界")
+fn main() -> Result<(), Box<dyn Error>> {
+    let x = 2 + 2;
+    println!("2 + 2 = {}", x);
 }
 ```
 
