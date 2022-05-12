@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 p:not(:last-child) {
     margin-bottom: 20px;
 }
-/* Code  */
+/* Code */
 code {
     font-family: monospace;
     font-size: .8em !important;
@@ -143,6 +143,7 @@ code {
 }
 pre {
     background-color: var(--pre-background) !important;
+	border: 1px solid var(--grey2);
 }
 @media(max-width: 1000px) {
     pre {
@@ -151,7 +152,7 @@ pre {
 }
 pre code {
     padding: 0;
-    background-color: var(--grey3);
+    background-color: var(--pre-background) !important;
 }
 blockquote {
     border-left: 4px solid var(--grey2);
