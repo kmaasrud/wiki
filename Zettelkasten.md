@@ -10,54 +10,6 @@ A **Zettelkasten** is a method of note-taking pioneered by [Conrad Gessner](http
 
 ## IDs
 
-The IDs used to identify your notes can be whatever you prefer, as long as they are unique. The preferred method for a physical Zettelkasten is to use numbers based on the date and time (e.g. `202003202350`). For software-based Zettelkasten, one could just use the title of the note or a randomly generated ID (like the one in the URL of this page).
-
-<details>
-<summary>This is a spoiler</summary>
-
-### Here is h3
-
-Much content, such wow
-
-> Something smart
->
-> - Some smart guy, 1929
-
-</details>
-
-Here is a list:
-
-- Element 1
-- Element 2
-- Element 3 with $\sin(x)$ math inside.
-
-Here is a numbered list as well:
-
-1. What the hell?
-
-    This was a very long list element, phew
-
-2. This second element even includes a dropdown
-
-    <details>
-    <summary>More stuff</summary>
-
-    - Woa, here is a sublist
-    - That is pretty cool, isn't it?
-
-    </details>
-
-3. Last element just for good measure
-
-## Here I've also included some code
-
-```rust
-// This is some sample code
-// Click here and start typing.
-fn main() -> Result<(), Box<dyn Error>> {
-    let x = 2 + 2;
-    println!("2 + 2 = {}", x);
-}
-```
+The IDs used to identify your notes can be whatever you prefer, as long as they are unique. The preferred method for a physical Zettelkasten is to use numbers based on the date and time (e.g. `202003202350`). For software-based Zettelkasten, one could just use the title of the note or a randomly generated ID (like the one in the URL of this page).2022-10-15
 
 [^wiki]: Wikipedia contributors. (2021, March 16). Zettelkasten. Wikipedia. <https://en.wikipedia.org/wiki/Zettelkasten>
