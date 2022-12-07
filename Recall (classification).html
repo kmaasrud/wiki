@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html color-mode="light">
 <head>
-<title>Expected value - kmaasrud's wiki</title>
+<title>Recall (classification) - kmaasrud's wiki</title>
 <meta charset="UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,16 +43,20 @@ delimiters: [
 
 <h1>
 <a href="./index.html">~</a>
-Expected value
+Recall (classification)
 </h1>
 </header>
 <article>
-<p>The <em>expected value</em> of a variable $X$ is a generalization of the <a href="Mean.html">mean</a> of said value.<sup class="footnote-reference"><a href="#wiki">1</a></sup> In other words, it is the <em>weighted</em> <a href="Mean.html">mean</a>.</p>
-<p>In the <em>discrete case</em>, consider a set of data $X = {x_1, …, x_N}$ where $p_i$ represents the probability of $x_i$ occuring. Here the expected value is:</p>
-<p>$$ \mathbb{E}[X] = \sum_{i = 1}^N p_i x_i $$</p>
-<div class="footnote-definition" id="wiki"><sup class="footnote-definition-label">1</sup>
-<p>Wikipedia contributors. (2021, March 17). Expected value. Wikipedia. <a href="https://en.wikipedia.org/wiki/Expected_value">https://en.wikipedia.org/wiki/Expected_value</a></p>
-</div>
+<p>In statistical classification, the <em>recall</em> of a classification value is the
+ratio between the number of times that value got predicted correctly and the
+number of times that value appears in the training dataset.</p>
+<p>$$ \text{recall}<em>x = \frac{N</em>\text{correctly predicted}(x)}{N(x)}, $$</p>
+<p>where $x$ is the value being predicted.</p>
+<p>Typically, this appears in binary classification, where we want to compare the
+number of true positives against the number of positives. However, the precision
+applies to any classification.</p>
+<p>See also <a href="Precision%20(classification).html">Precision (classification)</a>, <a href="Accuracy%20(classification).html">Accuracy (classification)</a> and
+[[F1-score]].</p>
 
 </article>
 <footer>
@@ -61,9 +65,9 @@ Expected value
 <h3>Incoming links</h3>
 <p>
 
-<a href="Variance.html">Variance</a>
+<a href="Precision (classification).html">Precision (classification)</a>
 
-<a href="Bias.html">Bias</a>
+<a href="Accuracy (classification).html">Accuracy (classification)</a>
 
 </p>
 </div>
