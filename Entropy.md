@@ -9,4 +9,4 @@ The **entropy** of an isolated system is defined as
 
 $$ S \equiv k\ln \Omega ,$$
 
-where $k$ is the [[Boltzmann constant]] and $\Omega$ is the [[Multiplicity|multiplicity]] of the system.
+where $k$ is the [[Boltzmann constant]] and $\Omega$ is the multiplicity of the system.
