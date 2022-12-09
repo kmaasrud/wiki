@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html color-mode="light">
 <head>
-<title>Precision (classification) - kmaasrud's wiki</title>
+<title>Additive smoothing - kmaasrud's wiki</title>
 <meta charset="UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,35 +43,25 @@ delimiters: [
 
 <h1>
 <a href="./index.html">~</a>
-Precision (classification)
+Additive smoothing
 </h1>
 </header>
 <article>
-<p>In statistical classification, the <em>precision</em> of a classifier over a class is
-the ratio between the number of times that class got predicted correctly and the
-number of times that class got predicted. Namely,</p>
-<p>$$ \text{precision}(x) = \frac{N_\text{correctly predicted}(x)}{N_\text{predicted}(x)}, $$</p>
-<p>where $x$ is the class being predicted.</p>
-<p>Typically, this appears in binary classification, where we want to compare the
-number of true positives against the number of true <em>and</em> false positives.</p>
-<p>See also <a href="Recall%20(classification).html">Recall (classification)</a>, <a href="Accuracy%20(classification).html">Accuracy (classification)</a> and
-<a href="F-score.html">F-score</a>.</p>
+<p>Additive smoothing, Lidstone-smoothing or Laplace-smoothing refers to a way of
+smoothing categorical data. Given a set of categories ${c_1, c_2, \dots,
+c_N}$, we consider the smoothed probability as</p>
+<p>$$ \hat P (c_i) = \frac{N_{c_i} + k}{N + kC}, $$</p>
+<p>where $C$ is the number of categories, $N$ is the size of the dataset and
+$N_{c_i}$ is the count of category $c_i$ in the dataset. $k &gt; 0$ is here a
+smoothing parameter.</p>
+<p>Setting $k = 0$ does no smoothing and gives the regular empirical probability,
+while $k = 1$ is often called <em>Laplace-smoothing</em>. Typically, a value between
+$0$ and $1$ is chosen.</p>
+<p>The method is often applied as a way of compensating for non-existing data in a
+classification problem, e.g. when using a <a href="Na%C3%AFve%20Bayes%20classifier.html">Naïve Bayes classifier</a>.</p>
 
 </article>
 <footer>
-
-<div class="incoming-links">
-<h3>Incoming links</h3>
-<p>
-
-<a href="Recall (classification).html">Recall (classification)</a>
-
-<a href="Accuracy (classification).html">Accuracy (classification)</a>
-
-<a href="F-score.html">F-score</a>
-
-</p>
-</div>
 
 </footer>
 </main>
