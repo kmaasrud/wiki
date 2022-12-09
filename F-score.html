@@ -52,17 +52,29 @@ the <a href="Precision%20(classification).html">precision</a> and
 <a href="Accuracy%20(classification).html">accuracy</a> of a classifier. It is defined by the
 positive real factor $\beta$, as</p>
 <p>$$
-F_\beta = (1 + \beta^2) \cdot \frac{\text{precision} \cdot \text{recall}}{\text{(\beta^2 \cdot precision) + \text{recall}}.
+F_\beta(x) = (1 + \beta^2) \cdot \frac{\text{precision}(x) \cdot \text{recall}(x)}{\left(\beta^2 \cdot \text{precision}(x)\right) + \text{recall}(x)},
 $$</p>
+<p>where $x$ is the class being classified.</p>
 <p>Typically, we consider the F1-score, which is the harmonic mean between the
 <a href="Precision%20(classification).html">precision</a> and
 <a href="Accuracy%20(classification).html">accuracy</a>, namely</p>
 <p>$$
-F_1 = 2\frac{\text{precision}\cdot\text{recall}}{\text{precision} + \text{recall}}.
+F_1(x) = 2\frac{\text{precision}(x)\cdot\text{recall}(x)}{\text{precision}(x) + \text{recall}(x)}.
 $$</p>
 
 </article>
 <footer>
+
+<div class="incoming-links">
+<h3>Incoming links</h3>
+<p>
+
+<a href="Recall (classification).html">Recall (classification)</a>
+
+<a href="Accuracy (classification).html">Accuracy (classification)</a>
+
+</p>
+</div>
 
 </footer>
 </main>
