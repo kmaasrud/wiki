@@ -39,4 +39,4 @@ $$ \mathbf X^T(\mathbf y - \mathbf X\beta) = 0$$
 
 $$\Rightarrow \hat \beta = (\mathbf X^T\mathbf X)^{-1}\mathbf X^T \mathbf y $$
 
-[^elements]: [[The elements of statistical learning]]
+[^elements]: Hastie, T., Tibshirani, R., & Friedman, J. H. (2009). *The elements of statistical learning: data mining, inference, and prediction* (2nd ed). Springer.

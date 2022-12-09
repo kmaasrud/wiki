@@ -9,4 +9,4 @@ $$ \hat \beta^{\text{lasso}} = \underset{\beta}{\arg \min} \begin{Bmatrix}\sum_{
 
 Notice the similarity to [[Ridge regression]], the difference being the penalty. The ridge penalty $L_2 \equiv \sum_{j=1}^p\beta_j^2$ is replaced by the Lasso penalty $L_1 \equiv \sum_{j=1}^p |\beta_j|$. There's also a difference in that the Lasso regressor has no closed form expression, and must thus be computed programatically.
 
-[^elements]: [[The elements of statistical learning]]
+[^elements]: Hastie, T., Tibshirani, R., & Friedman, J. H. (2009). *The elements of statistical learning: data mining, inference, and prediction* (2nd ed). Springer.

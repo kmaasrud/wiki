@@ -12,5 +12,6 @@ Setting $k = 0$ does no smoothing and gives the regular empirical probability,
 while $k = 1$ is often called *Laplace-smoothing*. Typically, a value between
 $0$ and $1$ is chosen.
 
-The method is often applied as a way of compensating for non-existing data in a
-classification problem, e.g. when using a [[Naïve Bayes classifier]].
+The method is often applied as a way of compensating for non-existing data for a
+category in a classification problem, e.g. when using a
+[[Naïve Bayes classifier]].
