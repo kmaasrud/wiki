@@ -1,14 +1,13 @@
-In statistical classification, the *recall* of a classification value is the
-ratio between the number of times that value got predicted correctly and the
-number of times that value appears in the training dataset.
+In statistical classification, the *recall* of a classifier over a class is the
+ratio between the number of times a class got predicted correctly and the number
+of times that class actually appears in the corresponding dataset.
 
-$$ \text{recall}_x = \frac{N_\text{correctly predicted}(x)}{N(x)}, $$
+$$ \text{recall}(x) = \frac{N_{\text{correctly predicted}}(x)}{N(x)}, $$
 
-where $x$ is the value being predicted.
+where $x$ is the class being classified.
 
 Typically, this appears in binary classification, where we want to compare the
-number of true positives against the number of positives. However, the precision
-applies to any classification.
+number of true positives against the number of positives.
 
 See also [[Precision (classification)]], [[Accuracy (classification)]] and
-[[F1-score]].
+[[F-score]].

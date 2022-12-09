@@ -1,14 +1,13 @@
-In statistical classification, the *precision* of a classification value is the
-ratio between the number of times that value got predicted correctly and the
-number of times that value got predicted. Namely,
+In statistical classification, the *precision* of a classifier over a class is
+the ratio between the number of times that class got predicted correctly and the
+number of times that class got predicted. Namely,
 
-$$ \text{precision}_x = \frac{N_\text{correctly predicted}(x)}{N_\text{predicted}(x)}, $$
+$$ \text{precision}_{x} = \frac{N_\text{correctly predicted}(x)}{N_\text{predicted}(x)}, $$
 
-where $x$ is the value being predicted.
+where $x$ is the class being predicted.
 
 Typically, this appears in binary classification, where we want to compare the
 number of true positives against the number of true *and* false positives.
-However, the precision applies to any classification.
 
 See also [[Recall (classification)]], [[Accuracy (classification)]] and
 [[F1-score]].
